@@ -6,4 +6,5 @@ export interface Message {
   component?: unknown;
   right?: boolean;
   props?: Record<string, any>;
+  userTyping?: boolean;
 }

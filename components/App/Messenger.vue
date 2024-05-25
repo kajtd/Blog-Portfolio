@@ -27,7 +27,6 @@
         v-for="(message, index) in messages"
         :key="index"
         class="px-4 py-3 flex gap-2"
-        :class="{ 'self-end': message.right }"
       >
         <img
           :src="message.avatar"
@@ -66,15 +65,18 @@
       </div>
     </transition-group>
 
-    <div
-      v-if="showTyping"
-      class="px-4 py-3 flex gap-2 animate-pulse"
-      :class="{ 'self-end': userTyping }"
-    >
-      <div class="w-8 h-8 rounded-full bg-gray-300"></div>
-      <div class="flex flex-col space-y-2">
-        <div class="w-24 h-2 bg-gray-300 rounded-full"></div>
-        <div class="w-16 h-2 bg-gray-300 rounded-full"></div>
+    <div v-if="showTyping" class="px-4 py-3 flex gap-2">
+      <img
+        :src="typingUserAvatar"
+        alt="Typing User"
+        class="w-8 h-8 rounded-full"
+      />
+      <div
+        class="flex items-center animate-pulse bg-gray-300/50 p-2.5 w-fit h-3 mt-auto rounded-full"
+      >
+        <span class="dot bg-gray-500"></span>
+        <span class="dot bg-gray-500"></span>
+        <span class="dot bg-gray-500"></span>
       </div>
     </div>
   </div>
@@ -90,8 +92,12 @@ interface Props {
 const props = defineProps<Props>();
 
 const messages = ref<Message[]>([]);
-const showTyping = ref(true);
-const userTyping = ref(false);
+
+const typingUserAvatar = computed(() => {
+  return props.queuedMessages[0].avatar;
+});
+
+const showTyping = ref(false);
 
 const processMessages = () => {
   if (props.queuedMessages.length === 0) return;
@@ -109,7 +115,7 @@ const processMessages = () => {
         processMessages();
       }, 1000);
     }
-  }, 1000);
+  }, 1500);
 };
 
 onMounted(() => {
@@ -133,4 +139,32 @@ onMounted(() => {
   animation: slide-in 0.5s ease-out;
 }
 
+@keyframes typing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
 </style>

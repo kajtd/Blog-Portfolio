@@ -34,7 +34,7 @@
           </NuxtLink>
         </li>
         <li class="flex-1"></li>
-        <li>
+        <li class="hidden md:block">
           <AppButton @click="isNewsletterModalVisible = true" icon="fa:send">
             Newsletter
           </AppButton>
@@ -52,15 +52,26 @@
       </ul>
       <div
         v-if="isMenuOpen"
-        class="mx-auto absolute top-22 w-[calc(100%-32px)] left-0 right-0 shadow-sm items-center py-2 px-12 text-sm font-medium text-gray-600/90 rounded-2xl bg-white backdrop-blur border border-gray-300/70"
+        class="mx-auto absolute top-0 bottom-0 w-full h-screen left-0 right-0 grid place-items-center py-2 px-12 text-sm font-medium text-gray-600/90 bg-white"
       >
-        <ul class="flex flex-col items-center py-4">
+        <button
+          class="absolute top-3 right-3 bg-gray-300/30 rounded-full w-6 h-6 grid place-items-center ring-offset-2 hover:ring-2 hover:ring-primary-300 transition-all duration-300"
+          @click="isMenuOpen = !isMenuOpen"
+        >
+          <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
+        </button>
+        <ul class="flex flex-col items-center py-4 justify-center gap-4">
           <li v-for="item in items" :key="item.path" class="py-2">
             <NuxtLink
               :to="item.path"
-              class="text-gray-700 hover:text-primary-400"
+              class="text-gray-700 hover:text-primary-400 text-base"
               >{{ item.name }}</NuxtLink
             >
+          </li>
+          <li>
+            <AppButton @click="openNewsletterModal" icon="fa:send">
+              Newsletter
+            </AppButton>
           </li>
         </ul>
       </div>
@@ -86,4 +97,9 @@ const items = [
     path: "/contact",
   },
 ];
+
+const openNewsletterModal = () => {
+  isMenuOpen.value = false;
+  isNewsletterModalVisible.value = true;
+};
 </script>

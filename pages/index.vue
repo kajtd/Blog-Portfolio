@@ -2,7 +2,7 @@
   <main class="min-h-screen flex flex-col items-center">
     <div class="space-y-8 flex flex-col items-center px-4">
       <HomeIntro />
-      <AppMessenger :queued-messages="queuedMessages" />
+      <AppMessenger :queued-messages="queuedMessages" class="min-h-72" />
       <HomeAbout />
       <HomeProjects />
       <HomeFeaturedArticles />
@@ -48,6 +48,7 @@ const queuedMessages = ref<Message[]>([
     name: "You 😎",
     avatar: "/user-avatar.svg",
     text: "Thanks a bunch!",
+    userTyping: true,
   },
   {
     name: "Kajetan",

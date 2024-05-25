@@ -8,7 +8,7 @@
   />
   <div
     v-show="isModalVisible"
-    class="fixed inset-0 bg-white/90 flex justify-center items-center z-[100]"
+    class="fixed inset-0 bg-white/90 flex justify-center items-center z-[100] mx-2"
   >
     <div
       class="bg-white p-6 rounded-2xl shadow max-w-[400px] w-full border border-gray-300/90 relative"

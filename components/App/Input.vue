@@ -23,7 +23,7 @@ const updateValue = (value: string) => {
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div class="flex items-center w-full">
     <input
       :value="modelValue"
       :placeholder="placeholder"
@@ -31,7 +31,7 @@ const updateValue = (value: string) => {
       :pattern="pattern"
       @input="updateValue($event.target.value)"
       :class="[
-        'text-sm px-3 h-8 rounded-l-[10px] shadow-sm border flex-1 transition bg-white',
+        'text-sm w-fit px-3 h-8 rounded-l-[10px] shadow-sm border flex-1 transition bg-white',
         {
           'border-gray-300/80 outline-none ring-offset focus:ring-2 focus:ring-primary-300 focus:z-10':
             !secondary && !tertiary,
@@ -43,7 +43,7 @@ const updateValue = (value: string) => {
     <button
       v-if="buttonText"
       :class="[
-        'text-sm px-3 h-8 rounded-r-[10px] shadow-sm border border-l-0 font-medium transition',
+        'text-sm px-3 h-8 rounded-r-[10px] shadow-sm border border-l-0 font-medium transition w-fit',
         {
           'border-gray-300/80 text-black bg-white outline-none ring-offset hover:ring-2 hover:ring-primary-300 focus:z-10':
             !secondary && !tertiary,

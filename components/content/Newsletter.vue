@@ -34,7 +34,9 @@
           class="h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
         />
         <p class="text-sm text-gray-600/80">
-          I accept <NuxtLink to="/privacy-policy">privacy policy</NuxtLink> when signing to newsletter
+          I accept
+          <NuxtLink to="/legal/privacy-policy">privacy policy</NuxtLink> when
+          signing to newsletter
         </p>
       </div>
     </div>
