@@ -65,18 +65,18 @@
       </div>
     </transition-group>
 
-    <div v-if="showTyping" class="px-4 py-3 flex gap-2">
+    <div v-show="showTyping" class="px-4 py-3 flex gap-2 transition-all">
       <img
         :src="typingUserAvatar"
         alt="Typing User"
         class="w-8 h-8 rounded-full"
       />
       <div
-        class="flex items-center animate-pulse bg-gray-300/50 p-2.5 w-fit h-3 mt-auto rounded-full"
+        class="flex items-center bg-gray-300/30 p-2 w-fit mt-auto rounded-full"
       >
-        <span class="dot bg-gray-500"></span>
-        <span class="dot bg-gray-500"></span>
-        <span class="dot bg-gray-500"></span>
+        <span class="dot bg-gray-500/80"></span>
+        <span class="dot bg-gray-500/80"></span>
+        <span class="dot bg-gray-500/80"></span>
       </div>
     </div>
   </div>
@@ -94,7 +94,7 @@ const props = defineProps<Props>();
 const messages = ref<Message[]>([]);
 
 const typingUserAvatar = computed(() => {
-  return props.queuedMessages[0].avatar;
+  return props.queuedMessages[0]?.avatar;
 });
 
 const showTyping = ref(false);
