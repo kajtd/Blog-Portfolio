@@ -1,7 +1,7 @@
 <template>
   <div
     id="about"
-    class="space-y-6 rounded-2xl shadow-xs max-w-xl w-full border border-gray-300/70 bg-white min-h-52 text-gray-600/90 px-6 py-12"
+    class="space-y-6 rounded-2xl shadow-xs max-w-xl w-full border border-gray-300/70 bg-white min-h-52 text-gray-700/90 px-6 py-12"
   >
     <h4 class="text-2xl md:text-4xl font-medium text-black">
       Nice to meet you.
@@ -28,7 +28,7 @@
       way, I’m able to ship apps faster, but also have the flexibility to make
       them personal.
     </p>
-    <p class="pb-12 text-sm md:text-base">
+    <p class="text-sm md:text-base">
       Besides developing, I enjoy topics like productivity, SEO, and wellness.
       You’ll also often find me going for a calming walk in the forest 🌳
     </p>
