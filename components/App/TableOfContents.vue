@@ -1,35 +1,28 @@
 <template>
   <aside class="p-2 w-fit">
     <nav
-      class="flex flex-col p-4 mx-0 rounded-xl bg-white shadow-xs border border-gray-300/90"
+      class="flex flex-col py-2 mx-0 rounded-xl bg-white shadow-xs border border-gray-300/90"
     >
-      <h4 class="mx-0 my-0">Table of Contents</h4>
-      <ul class="mx-0 mt-2 px-0">
+      <p class="text-lg font-semibold ml-6 mb-2 text-black">
+        Table of Contents
+      </p>
+      <ul class="mx-0 my-0 px-2 font-medium text-black/90">
         <li
           v-for="{ id, text, children } in tocLinks"
           :id="`toc-${id}`"
           :key="id"
           ref="tocLinksH2"
-          class="mb-2 ml-0 cursor-pointer list-none text-sm last:mb-0"
+          class="px-4 py-2 my-3 ml-0 cursor-pointer list-none text-base hover:bg-black hover:text-white rounded-lg"
+          :class="{
+            'bg-black text-white': router.currentRoute.value.hash === `#{id}`,
+          }"
           @click="onClick(id)"
         >
           {{ text }}
-          <ul v-if="children" class="my-2">
-            <li
-              v-for="{ id: childId, text: childText } in children"
-              :id="`toc-${childId}`"
-              :key="childId"
-              ref="tocLinksH3"
-              class="mb-2 ml-0 cursor-pointer list-none text-xs last:mb-0"
-              @click.stop="onClick(childId)"
-            >
-              {{ childText }}
-            </li>
-          </ul>
         </li>
       </ul>
     </nav>
-    <div class="flex flex-col space-y-2 mt-4 bg-white">
+    <div class="flex flex-col space-y-2 mt-4">
       <div class="flex space-x-2 items-center">
         <AppButton
           @click="copyArticleLink"
@@ -40,7 +33,7 @@
           Copy Link
         </AppButton>
         <AppButton @click="shareOnTwitter" tail-icon="prime:twitter">
-          Share on Twitter
+          Share on
         </AppButton>
       </div>
     </div>

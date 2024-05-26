@@ -1,25 +1,18 @@
 <template>
   <main class="min-h-screen m-0">
     <div
-      class="w-full max-w-3xl mx-auto prose prose-blockquote:not-italic prose-img:ring-1 prose-img:ring-gray-200 prose-img:rounded-lg"
+      class="w-full max-w-3xl mx-auto prose prose-blockquote:not-italic prose-img:ring-1 prose-img:ring-gray-200 prose-img:rounded-lg prose-pre:bg-white"
     >
       <ContentDoc v-slot="{ doc }" tag="article">
-        <article class="pt-12 p-4 md:p-10 nuxt-content w-full mx-auto">
-          <div class="flex items-center space-x-2 mb-4">
-            <AppBadge v-for="tag in doc.tags" :key="tag" pink>
-              {{ tag }}
-            </AppBadge>
-          </div>
-          <p class="text-sm font-medium mt-12 text-center text-black">
+        <article class="p-4 md:p-10 nuxt-content w-full mx-auto">
+          <AppBadge
+            blue
+            class="text-sm mx-auto mb-4 font-medium mt-12 text-center"
+          >
             Updated: {{ getReadableDate(doc.published) }}
-          </p>
-          <h1 class="text-center font-semibold">{{ doc.title }}</h1>
-          <img
-            :src="doc.img"
-            :alt="doc.title"
-            class="rounded-3xl h-[478px] w-full object-cover"
-          />
-          <AppTableOfContents />
+          </AppBadge>
+          <h1 class="text-center font-semibold text-4xl">{{ doc.title }}</h1>
+          <img :src="doc.img" :alt="doc.title" class="rounded-3xl w-full" />
           <ContentRenderer :value="doc" />
         </article>
       </ContentDoc>
@@ -41,14 +34,15 @@ useHead({
   @apply no-underline;
 }
 .prose h2[id] {
-  @apply !text-3xl;
+  @apply text-3xl xl:text-4xl font-medium;
 }
 .prose h3[id] {
-  @apply !text-2xl;
+  @apply text-2xl xl:text-3xl font-medium;
 }
 
-.prose article > div > p {
-  @apply text-black;
+.prose article > div > p,
+.prose article > div > ul > li {
+  @apply text-black text-base xl:text-lg;
 }
 
 .prose code:not(pre code) {
