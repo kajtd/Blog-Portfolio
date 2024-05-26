@@ -1,12 +1,26 @@
 <template>
   <div
-    class="bg-[url('/dot-grid.webp')]"
-    style="background-position: center top"
+    :class="isArticle ? 'bg-white' : 'bg-[url(\'/dot-grid.webp\')]'"
+    :style="
+      isArticle
+        ? ''
+        : {
+            'background-image': `url('/dot-grid.webp')`,
+            'background-position': 'center top',
+          }
+    "
   >
     <NuxtLoadingIndicator color="#E4D9FF" />
     <div
-      class="bg-[url('/hero.webp')] bg-no-repeat"
-      style="background-position: center -160vh"
+      :class="isArticle ? '' : 'bg-[url(\'/hero.webp\')] bg-no-repeat'"
+      :style="
+        isArticle
+          ? ''
+          : {
+              'background-image': `url('/hero.webp')`,
+              'background-position': 'center -160vh',
+            }
+      "
     >
       <div class="h-32"></div>
       <div>
@@ -18,6 +32,15 @@
     <AppFooter />
   </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+
+const isArticle = computed(() => {
+  // Check if the current route is an article
+  return route.path.startsWith("/articles/");
+});
+</script>
 
 <style>
 .page-enter-active,
