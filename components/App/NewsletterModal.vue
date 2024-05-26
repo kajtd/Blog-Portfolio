@@ -34,7 +34,7 @@
       </form>
       <div class="text-center h-4 my-6 border-t border-gray-300/70">
         <p
-          class="text-xs font-medium bg-white text-center relative -top-[17px] p-2 inline-block text-gray-700/80"
+          class="text-xs font-medium bg-white text-center relative -top-[16px] p-2 inline-block text-gray-700/80"
         >
           Last Newsletters [{{ emails.length }}]
         </p>
@@ -104,21 +104,32 @@ watch(
   async (newValue, oldValue) => {
     if (newValue === true) {
       loading.value = true;
-      const response = await $fetch<Response>(
-        "https://api.buttondown.email/v1/emails",
-        {
-          method: "get",
-          headers: {
-            Authorization: `Token ${import.meta.env.VITE_BUTTONDOWN_API_KEY}`,
-          },
-        }
-      );
-      emails.value = response.results.slice(-3); // Fetching the last three newsletters from the response
+
+      // Start the timer
+      const timer = new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Fetch the emails
+      const fetchEmails = async () => {
+        const response = await $fetch<Response>(
+          "https://api.buttondown.email/v1/emails",
+          {
+            method: "get",
+            headers: {
+              Authorization: `Token ${import.meta.env.VITE_BUTTONDOWN_API_KEY}`,
+            },
+          }
+        );
+        return response.results.slice(-3); // Fetching the last three newsletters from the response
+      };
+
+      // Run the fetch and the timer in parallel
+      const [emailResults] = await Promise.all([fetchEmails(), timer]);
+
+      emails.value = emailResults;
       loading.value = false;
     }
   }
 );
-
 const closeModal = () => {
   emit("update:isModalVisible", false);
 };
