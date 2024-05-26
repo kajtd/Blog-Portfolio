@@ -8,7 +8,7 @@
     <p class="text-base md:text-lg text-gray-800/70 text-center pb-8">
       I enjoy building applications from scratch, testing different
       methodologies and technologies. <br />
-      Let me show you some of my work from past.
+      Let me show you some of my work from the past.
     </p>
     <HomeProjectCard
       v-show="currentSlide === index"
@@ -91,7 +91,8 @@ const prevSlide = () => {
 .slide-leave-active {
   transition: transform 0.5s ease;
 }
-.slide-enter, .slide-leave-to {
+.slide-enter,
+.slide-leave-to {
   transform: translateX(100%);
 }
 </style>
