@@ -21,7 +21,7 @@ That is why it is important to sync your repositories after deleting a branch fr
 
 Let's talk about how to delete a local branch. Just use the command below:
 
-```
+```bash
 git branch -d your_branch
 ```
 
@@ -29,26 +29,18 @@ The `-d` flag stands for `--delete`. It will only remove your branch if it has b
 
 Below you can see the git command that will allow you to force delete a branch with unmerged changes.
 
+```bash
     git branch -D your_branch
-
-<Alert type="error">
-Before using it, be careful because it will delete all data on this branch.
-</Alert>
-<br />
-<Alert type="warning">
-Before using it, be careful because it will delete all data on this branch.
-</Alert>
-<br />
-<Alert type="success">
-Before using it, be careful because it will delete all data on this branch.
-</Alert>
+```
 
 ## How to Delete a Remote Branch in Git?
 
 Now that you know how to delete a local branch, let's move on to remote branches.
 To delete a remote branch, use the following command:
 
+```bash
     git push origin -d your_branch
+```
 
 Your branch will be removed from the remote repository due to this action. But, if you are working on the project with others, make sure this branch is no longer needed before deleting it.
 
@@ -58,7 +50,9 @@ You can also inform your colleagues that you want to delete the remote branch, a
 
 After deleting branches, you should sync both the local and remote repositories. It can be quickly done by using the command below to pull the latest changes from the remote repository:
 
+```bash
     git fetch --all --prune
+```
 
 By using `--prune`, you will get rid of all your local branches that no longer exist on the remote. So, it is a great way to keep your local repo up to date!
 
@@ -66,12 +60,8 @@ By using `--prune`, you will get rid of all your local branches that no longer e
 
 Once you've merged your branch with the parent branch, it's a good idea to delete the old one. It can be done very quickly - just go into your repository settings and check the right box. Here's an example of how to set this on GitHub.
 
-| ![automatically delete head branches on GitHub](/images/github-delete-branches.webp)
-|:--:|
-| _Automatically delete head branches on GitHub_ |
-
 ## Wrapping Up
 
 In this article, I've covered the basics of deleting local and remote Git branches and syncing your local repository with remote changes. By using these commands and other [Git best practices](https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60), you will ensure your repo is always neat and tidy.
 
-Happy coding! ✌
+Happy coding!
