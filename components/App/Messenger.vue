@@ -74,9 +74,9 @@
       <div
         class="flex items-center bg-gray-300/30 p-2 w-fit mt-auto rounded-full"
       >
-        <span class="dot bg-gray-500/80"></span>
-        <span class="dot bg-gray-500/80"></span>
-        <span class="dot bg-gray-500/80"></span>
+        <span class="dot bg-primary-500/80"></span>
+        <span class="dot bg-primary-500/80"></span>
+        <span class="dot bg-primary-500/80"></span>
       </div>
     </div>
   </div>
@@ -141,13 +141,16 @@ onMounted(() => {
 
 @keyframes typing {
   0% {
-    transform: translateY(0);
+    opacity: 0.5;
   }
   50% {
-    transform: translateY(-50%);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
   }
   100% {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 

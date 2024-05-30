@@ -36,7 +36,7 @@ const queuedMessages = ref<Message[]>([
   },
   {
     name: "Kajetan",
-    text: "I'm a web developer based in Poland. I like building apps and documenting my journey through written content :))",
+    text: "I'm a web developer based in Poland. I like building apps and documenting my journey through written content.",
     avatar: "/Avatar.svg",
   },
   {
