@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen pt-12">
     <div
-      class="mx-auto max-w-3xl prose prose-blockquote:not-italic prose-pre:bg-gray-900 prose-img:ring-1 prose-img:ring-gray-200 prose-img:rounded-lg"
+      class="mx-auto px-6 max-w-3xl prose prose-blockquote:not-italic prose-pre:bg-gray-900 prose-img:ring-1 prose-img:ring-gray-200 prose-img:rounded-lg"
     >
       <ContentDoc v-slot="{ doc }">
         <article>
