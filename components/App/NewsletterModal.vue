@@ -8,7 +8,8 @@
   />
   <div
     v-show="isModalVisible"
-    class="fixed inset-0 bg-white/90 flex justify-center items-center z-[100] mx-2"
+    class="fixed inset-0 bg-white/90 flex justify-center items-center z-[100] px-2 newsletter-modal"
+    :class="{ open: isModalVisible }"
   >
     <div
       class="bg-white p-6 rounded-2xl shadow max-w-[400px] w-full border border-gray-300/90 relative"
@@ -69,20 +70,7 @@
 <script setup lang="ts">
 import { useNewsletterSubscription } from "@/composables/useNewsletterSubscription";
 import { getReadableDate } from "@/utils/util";
-
-interface Email {
-  id: string;
-  creation_date: string;
-  secondary_id: number;
-  subject: string;
-  absolute_url: string;
-  image: string;
-}
-
-interface Response {
-  results: Email[];
-  count: number;
-}
+import type { Email } from "~/types/Email";
 
 const props = defineProps<{
   isModalVisible: boolean;
@@ -109,17 +97,13 @@ watch(
       const timer = new Promise((resolve) => setTimeout(resolve, 1000));
 
       // Fetch the emails
-      const fetchEmails = async () => {
-        const response = await $fetch<Response>(
-          "https://api.buttondown.email/v1/emails",
-          {
-            method: "get",
-            headers: {
-              Authorization: `Token ${import.meta.env.VITE_BUTTONDOWN_API_KEY}`,
-            },
-          }
-        );
-        return response.results.slice(-3); // Fetching the last three newsletters from the response
+      const fetchEmails = async (): Promise<Email[]> => {
+        const response = await fetch("/api/fetchEmails");
+        if (!response.ok) {
+          throw new Error("Failed to fetch");
+        }
+        const data: Email[] = await response.json();
+        return data;
       };
 
       // Run the fetch and the timer in parallel

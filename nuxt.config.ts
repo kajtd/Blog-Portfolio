@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-newsletter",
   ],
+  runtimeConfig: {
+    public: {},
+    private: {
+      apiKey: process.env.VITE_BUTTONDOWN_API_KEY,
+    },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -19,7 +25,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   newsletter: {
     buttondown: {
-      apiKey: process.env.VITE_BUTTONDOWN_API_KEY,
+      apiKey: process.env.VITE_BUTTONDOWN_API_KEY!!,
       component: true, // optional
     },
   },
