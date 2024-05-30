@@ -2,7 +2,7 @@
 title: "Deleting Git Branches 101: Remove Local and Remote Branches"
 description: "Discover easy-to-follow steps for deleting Git branches and maintaining an organized repository."
 published: "2023-08-15"
-img: "download.jpg"
+img: "/articles/remove-branches-git/remove-branches-git.svg"
 alt: "git remove local branch"
 tags: ["Git"]
 ---

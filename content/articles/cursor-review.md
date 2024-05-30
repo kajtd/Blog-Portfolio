@@ -4,7 +4,7 @@ slug: cursor-review
 published: 2024/05/03
 updated: 2024/05/03
 tags: ["Programming"]
-img: "/download.jpg"
+img: "/articles/cursor-review/cursor-review.svg"
 description: "Discover Cursor: The ultimate code editor with AI capabilities. Write code, interact with a chatbot, and auto-debug errors for efficient coding."
 ---
 

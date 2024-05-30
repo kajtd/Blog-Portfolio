@@ -4,7 +4,7 @@ description: "Discover the benefits of using semantic HTML elements for improved
 published: 2024/05/03
 updated: 2024/05/03
 slug: "semantic-html-seo"
-img: "/download.jpg"
+img: "/articles/semantic-html-seo/semantic-html-seo.svg"
 tags: ["SEO", "HTML"]
 ---
 

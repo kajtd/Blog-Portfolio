@@ -175,10 +175,6 @@ Links, like images, have vast implications in SEO. While there are many importan
 
 There are other rel values, too, but most situations might not require anything out of the ordinary. Still, it's beneficial to understand the distinction between _dofollow_ and _nofollow_ links and be aware of other variants.
 
-If you're looking to deep dive into the outbound links and their impact on SEO, I'd suggest exploring more on the topic. The document below provides a detailed insight into various link types and how they influence SEO.
-
-https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links
-
 ### Proper URL Structure
 
 Having the right URL structure is more important than it might seem at first glance. There are plenty of articles with URLs that are a mile long, stuffed with the full title, dates, and even random numbers. However, this is not the best way to handle that.

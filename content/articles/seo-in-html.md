@@ -2,7 +2,7 @@
 title: "9 Beginner HTML Tips for SEO"
 description: "Improve SEO with this set of HTML tips. Optimize images, use rich snippets, and craft effective titles and meta descriptions for better rankings."
 slug: seo-in-html
-img: "/download.jpg"
+img: "/articles/html-tips-seo/html-tips-seo.svg"
 published: 2024/05/03
 updated: 2024/05/03
 tags: ["SEO", "HTML"]
