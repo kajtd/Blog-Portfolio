@@ -4,7 +4,7 @@
       <HomeIntro />
       <AppMessenger :queued-messages="queuedMessages" class="min-h-72" />
       <HomeAbout />
-      <HomeProjects />
+      <!-- <HomeProjects /> -->
       <HomeFeaturedArticles />
     </div>
   </main>
@@ -41,7 +41,7 @@ const queuedMessages = ref<Message[]>([
   },
   {
     name: "Kajetan",
-    text: "If you’d like to check out my services or projects, just click the link below!",
+    text: "If you’d like to check out my work or articles, just scroll down!",
     avatar: "/Avatar.svg",
   },
   {

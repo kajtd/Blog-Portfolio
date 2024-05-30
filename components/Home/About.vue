@@ -7,8 +7,8 @@
       Nice to meet you.
     </h4>
     <p class="text-sm md:text-base">
-      Hi I'm Kajetan, web developer based in Poland. I like building apps and
-      documenting my journey through written content :))
+      Hi I'm Kajetan, a web developer based in Poland. I enjoy creating apps and
+      documenting my journey through written content.
     </p>
     <p class="text-sm md:text-base">
       Over the course of last two years, I've worked on many different projects

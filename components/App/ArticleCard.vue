@@ -8,7 +8,7 @@
         :src="article.img"
         alt=""
       />
-      <div class="flex px-6">
+      <div class="flex px-4 md:px-6">
         <AppBadge
           v-if="article.tags && article.tags.length > 0"
           v-bind="badgeProps"
@@ -17,16 +17,18 @@
         >
       </div>
       <h2
-        class="text-2xl font-medium font-display tracking-tight text-gray-800 group-hover:text-primary-900 px-6"
+        class="text-xl md:text-2xl font-medium font-display tracking-tight text-gray-800 group-hover:text-primary-900 px-4 md:px-6"
       >
         {{ article.title }}
       </h2>
-      <p class="relative z-10 mt-2 text-base text-gray-700/80 px-6">
+      <p
+        class="relative z-10 mt-2 text-sm md:text-base text-gray-700/80 px-4 md:px-6"
+      >
         {{ article.description }}
       </p>
       <time
         v-if="article.published"
-        class="relative mb-3 flex items-center text-sm text-gray-900 px-6"
+        class="relative mb-3 flex items-center text-xs md:text-sm text-gray-900/80 px-4 md:px-6"
         datetime="2022-09-05"
       >
         {{ getReadableDate(article.published) }}

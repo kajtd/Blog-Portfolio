@@ -14,7 +14,8 @@
             Subscribe to the newsletter
           </h2>
           <p class="text-sm text-gray-600/80 max-w-lg">
-            I'm writing on application development, checking out tools to make it faster, and sharing updates along the way.
+            I'm writing on application development, checking out tools to make
+            it faster, and sharing updates along the way.
           </p>
         </div>
         <form class="space-y-4" @submit.prevent="subscribeToNewsletter">
@@ -112,10 +113,10 @@ const links = ref([
     name: "About",
     _path: "/#about",
   },
-  {
-    name: "Projects",
-    _path: "/#projects",
-  },
+  // {
+  //   name: "Projects",
+  //   _path: "/#projects",
+  // },
   {
     name: "Contact",
     _path: "/contact",

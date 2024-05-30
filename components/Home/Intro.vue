@@ -37,8 +37,8 @@
     </div>
     <div class="flex flex-col text-sm px-4 py-3 text-gray-500/80">
       Web Developer, Based in Poland 🌐 <br />Building applications and websites
-      using no, low and full-code. <br />Writing articles on app development,
-      productivity and SaaS.
+      using no, low and full-code. <br />Writing articles on app development and
+      SaaS.
     </div>
     <div class="flex space-x-2 px-4">
       <AppButton class="px-6" secondary href="/#projects">Projects</AppButton>

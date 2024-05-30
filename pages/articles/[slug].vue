@@ -7,11 +7,13 @@
         <article class="p-4 md:p-10 nuxt-content w-full mx-auto">
           <AppBadge
             blue
-            class="text-sm mx-auto mb-4 font-medium mt-12 text-center"
+            class="text-xs md:text-sm mx-auto mb-4 font-medium mt-5 md:mt-12 text-center"
           >
             Updated: {{ getReadableDate(doc.published) }}
           </AppBadge>
-          <h1 class="text-center font-semibold text-4xl">{{ doc.title }}</h1>
+          <h1 class="text-center font-semibold text-3xl md:text-4xl">
+            {{ doc.title }}
+          </h1>
           <img :src="doc.img" :alt="doc.title" class="rounded-3xl w-full" />
           <ContentRenderer :value="doc" />
         </article>
@@ -34,15 +36,15 @@ useHead({
   @apply no-underline;
 }
 .prose h2[id] {
-  @apply text-3xl xl:text-4xl font-medium;
+  @apply text-2xl md:text-4xl font-medium;
 }
 .prose h3[id] {
-  @apply text-2xl xl:text-3xl font-medium;
+  @apply text-xl md:text-3xl font-medium;
 }
 
 .prose article > div > p,
 .prose article > div > ul > li {
-  @apply text-black text-base xl:text-lg;
+  @apply text-black text-base md:text-lg;
 }
 
 .prose code:not(pre code) {

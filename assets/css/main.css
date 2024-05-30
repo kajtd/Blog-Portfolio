@@ -7,3 +7,7 @@
     font-family: "Inter", system-ui, sans-serif;
   }
 }
+
+body.modal-visible {
+  overflow-y: hidden;
+}

@@ -40,7 +40,7 @@
           </AppButton>
         </li>
         <li class="block sm:hidden ml-3">
-          <button @click="isMenuOpen = !isMenuOpen">
+          <button @click="toggleMobileMenu">
             <Icon
               :name="
                 isMenuOpen ? 'iconamoon:close-duotone' : 'charm:menu-hamburger'
@@ -56,17 +56,18 @@
       >
         <button
           class="absolute top-3 right-3 bg-gray-300/30 rounded-full w-6 h-6 grid place-items-center ring-offset-2 hover:ring-2 hover:ring-primary-300 transition-all duration-300"
-          @click="isMenuOpen = !isMenuOpen"
+          @click="toggleMobileMenu"
         >
           <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
         </button>
         <ul class="flex flex-col items-center py-4 justify-center gap-4">
           <li v-for="item in items" :key="item.path" class="py-2">
-            <NuxtLink
-              :to="item.path"
+            <button
+              @click="navigateAndHideMenu(item.path)"
               class="text-gray-700 hover:text-primary-400 text-base"
-              >{{ item.name }}</NuxtLink
             >
+              {{ item.name }}
+            </button>
           </li>
           <li>
             <AppButton @click="openNewsletterModal" icon="fa:send">
@@ -86,6 +87,8 @@ const { styles } = useFixedHeader(headerRef);
 const isMenuOpen = ref(false);
 const isNewsletterModalVisible = ref(false);
 
+const router = useRouter();
+
 const items = [
   { name: "Home", path: "/" },
   {
@@ -97,6 +100,17 @@ const items = [
     path: "/contact",
   },
 ];
+
+const toggleMobileMenu = () => {
+  document.body.classList.toggle("modal-visible");
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const navigateAndHideMenu = (path) => {
+  router.push(path);
+  isMenuOpen.value = false;
+  document.body.classList.remove("modal-visible");
+};
 
 const openNewsletterModal = () => {
   isMenuOpen.value = false;
