@@ -1,7 +1,9 @@
 <template>
   <div class="mx-auto flex flex-col items-center space-y-4 py-8">
-    <AppBadge blue class="w-24">Content</AppBadge>
-    <h4 class="text-2xl md:text-4xl font-medium">Featured Articles</h4>
+    <AppBadge blue class="w-fit">Content</AppBadge>
+    <h4 class="text-2xl text-center md:text-4xl font-medium">
+      Featured Articles
+    </h4>
     <p
       class="text-sm sm:text-base md:text-lg text-gray-800/70 text-center pb-8"
     >
