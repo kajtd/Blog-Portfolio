@@ -20,7 +20,7 @@ const props = defineProps<BadgeProps>();
 
 const badgeClasses = computed(() => {
   return [
-    "px-2 py-0.5 w-fit grid place-items-center text-sm border-[1.25px] rounded-full font-medium",
+    "px-2 py-0.5 w-fit grid place-items-center text-xs md:text-sm border-[1.25px] rounded-full font-medium",
     {
       "bg-[#E3EAFD] text-[#133A9A] border-gray-900/10": props.blue,
       "bg-[#ECDFFB] text-[#5314A3] border-purple-900/10": props.purple,

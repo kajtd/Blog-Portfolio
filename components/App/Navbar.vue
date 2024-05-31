@@ -114,6 +114,7 @@ const navigateAndHideMenu = (path) => {
 
 const openNewsletterModal = () => {
   isMenuOpen.value = false;
+  document.body.classList.remove("modal-visible");
   isNewsletterModalVisible.value = true;
 };
 </script>

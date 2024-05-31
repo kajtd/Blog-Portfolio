@@ -35,7 +35,7 @@
         </a>
       </div>
     </div>
-    <div class="flex flex-col text-sm px-4 py-3 text-gray-500/80">
+    <div class="flex flex-col text-xs md:text-sm px-4 py-3 text-gray-500/80">
       Web Developer, Based in Poland 🌐 <br />Building applications and websites
       using no, low and full-code. <br />Writing articles on app development and
       SaaS.
@@ -56,8 +56,10 @@
     </div>
     <div v-show="isNewsletterBoxVisible" class="px-4 py-3 space-y-6">
       <div class="flex flex-col">
-        <p class="text-lg font-medium">Building apps while having fun</p>
-        <p class="text-sm text-gray-600/80">
+        <p class="text-base md:text-lg font-medium">
+          Building apps while having fun
+        </p>
+        <p class="text-xs md:text-sm text-gray-600/80">
           Tips and updates on no, low and full-code.
           <br />
           Writing on app development, productivity and SaaS.

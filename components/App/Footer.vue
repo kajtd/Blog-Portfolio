@@ -13,7 +13,7 @@
           <h2 class="text-xl text-black font-medium">
             Subscribe to the newsletter
           </h2>
-          <p class="text-sm text-gray-600/80 max-w-lg">
+          <p class="text-xs md:text-sm text-gray-600/80 max-w-lg">
             I'm writing on application development, checking out tools to make
             it faster, and sharing updates along the way.
           </p>

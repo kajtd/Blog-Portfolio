@@ -53,7 +53,7 @@ const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",
     component: ButtonComponent,
-    html: `<p>You are welcome!</p><p>Feel free to reach out to me if you need anything.</p><br /><p class="text-gray-500/90 text-sm font-regular">Would you like to get in touch?</p>`,
+    html: `<p>You are welcome!</p><p>Feel free to reach out to me if you need anything.</p><br /><p class="text-gray-500/90 text-xs md:text-sm font-regular">Would you like to get in touch?</p>`,
     props: {
       slot: "Drop me a message!",
       secondary: true,

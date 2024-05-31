@@ -20,7 +20,9 @@
       >
         <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
       </button>
-      <h2 class="text font-medium mb-2 text-lg">Subscribe to the Newsletter</h2>
+      <h2 class="text font-medium mb-2 mt-3 md:mt-0 text-lg">
+        Subscribe to the Newsletter
+      </h2>
       <p class="mb-4 text-base text-[#0F132499]">
         Join for tips and updates. You can unsubscribe anytime.
       </p>
@@ -28,7 +30,7 @@
         <AppInput
           v-model="email"
           placeholder="john.doe@gmail.com"
-          button-text="I want in!"
+          button-text="I'm in!"
           type="email"
           button-type="submit"
         />

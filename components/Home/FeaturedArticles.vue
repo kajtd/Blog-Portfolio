@@ -1,8 +1,10 @@
 <template>
   <div class="mx-auto flex flex-col items-center space-y-4 py-8">
     <AppBadge blue class="w-24">Content</AppBadge>
-    <h4 class="text-3xl md:text-4xl font-medium">Featured Articles</h4>
-    <p class="text-base md:text-lg text-gray-800/70 text-center pb-8">
+    <h4 class="text-2xl md:text-4xl font-medium">Featured Articles</h4>
+    <p
+      class="text-sm sm:text-base md:text-lg text-gray-800/70 text-center pb-8"
+    >
       I write on SEO, productivity, SaaS products or development tools.<br />Here,
       you'll find a bunch of articles I did in the past.
     </p>

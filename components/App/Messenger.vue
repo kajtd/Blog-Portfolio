@@ -46,7 +46,7 @@
               }}
             </p>
           </div>
-          <p class="text-sm text-black" v-if="message.text">
+          <p class="text-xs md:text-sm text-black" v-if="message.text">
             {{ message.text }}
           </p>
           <span

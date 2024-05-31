@@ -44,7 +44,7 @@ useHead({
 
 .prose article > div > p,
 .prose article > div > ul > li {
-  @apply text-black text-base md:text-lg;
+  @apply text-black text-sm sm:text-base md:text-lg;
 }
 
 .prose code:not(pre code) {
