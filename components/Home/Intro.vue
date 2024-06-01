@@ -65,12 +65,20 @@
           Writing on app development, productivity and SaaS.
         </p>
       </div>
-      <form @submit.prevent="subscribeToNewsletter">
+      <form class="block md:hidden" @submit.prevent="subscribeToNewsletter">
         <AppInput
           v-model="email"
           placeholder="john.doe@gmail.com"
-          button-text="I want in!"
           type="email"
+        />
+        <AppButton class="mt-4" type="submit">I want in!</AppButton>
+      </form>
+      <form class="hidden md:block" @submit.prevent="subscribeToNewsletter">
+        <AppInput
+          v-model="email"
+          placeholder="john.doe@gmail.com"
+          type="email"
+          button-text="Count me in!"
           button-type="submit"
         />
       </form>
@@ -90,4 +98,6 @@ const {
   subscribeToNewsletter,
 } = useNewsletterSubscription();
 const isNewsletterBoxVisible = ref(false);
+
+const { width } = useWindowSize();
 </script>
