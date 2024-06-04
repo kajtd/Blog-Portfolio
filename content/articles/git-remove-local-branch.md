@@ -56,10 +56,6 @@ After deleting branches, you should sync both the local and remote repositories.
 
 By using `--prune`, you will get rid of all your local branches that no longer exist on the remote. So, it is a great way to keep your local repo up to date!
 
-## Delete Branches Before Merging
-
-Once you've merged your branch with the parent branch, it's a good idea to delete the old one. It can be done very quickly - just go into your repository settings and check the right box. Here's an example of how to set this on GitHub.
-
 ## Wrapping Up
 
 In this article, I've covered the basics of deleting local and remote Git branches and syncing your local repository with remote changes. By using these commands and other [Git best practices](https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60), you will ensure your repo is always neat and tidy.

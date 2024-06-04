@@ -19,7 +19,7 @@ Did you know that there is a meta tag that defines keywords for search engines? 
 
 If you're not using it, there's no need to worry. The meta keyword tag is no longer used by Google for ranking and has little impact on search engine rankings.
 
-Although you don't need to worry about this specific tag, there are other HTML elements that, if not used correctly, can have a negative impact on SEO.
+However, although you don't need to worry about this specific tag, there are other HTML elements that, if not used correctly, can have a negative impact on SEO.
 
 That's why I have prepared this article - to provide you with a checklist that you can use to ensure that you are effectively using HTML for search engine optimization.
 
@@ -29,9 +29,9 @@ Let's dive in.
 
 Before we begin, it's important to note that this article will focus on several different types of elements, including:
 
-- HTML Tags: HTML tags are a fundamental part of a webpage used for creating elements. They may contain text, images, data items, or nothing at all.
-- Meta Tags: These are HTML tags that provide additional information about a page to search engines. We place them in the `<head>` section of our HTML code.
-- Attributes: HTML attributes provide extra information about HTML elements. They are specified in the start tag and can adjust the element's behavior.
+- _HTML Tags_: HTML tags are a fundamental part of a webpage used for creating elements. They may contain text, images, data items, or nothing at all.
+- _Meta Tags_: These are HTML tags that provide additional information about a page to search engines. We place them in the `<head>` section of our HTML code.
+- _Attributes_: HTML attributes provide extra information about HTML elements. They are specified in the start tag and can adjust the element's behavior.
 
 Now, let's explore some crucial HTML tips for improving your website's SEO.
 
@@ -146,13 +146,11 @@ Once you have generated and verified your schema markup, the final step is to ad
     </script>
 ```
 
-Using structured data to implement rich snippets is a great strategy to improve your website's click-through rate (CTR).
-
 ### **#3. Always Write Title Tags**
 
 The title tag is the first element that users see.
 
-It's important to note that the title tag is not necessarily the same as the title of an article. The title tag is what appears in search results and in a browser tab, while the `h1` header (which is the title of the article) is visible to a user after they visit a website.
+It's important to note that this tag is not necessarily the same as the title of an article. The title tag is what appears in search results and in a browser tab, while the `h1` header (which is the title of the article) is visible to a user after they visit a website.
 
 It's easy to confuse the two, but they are not the same.
 
@@ -174,9 +172,7 @@ Having optimized title tags is crucial for SEO because they help Google better u
 
 Besides helping your content stand out in search results, well-crafted titles can also **attract clicks**. However, be cautious not to cross the line between a catchy title and clickbait.
 
-Another interesting thing is that Google can rewrite titles for improved clarity and length. According to[ a study by Zyppy](https://zyppy.com/seo/title-tags/google-title-rewrite-study/), **Google rewrote 61.6% of the title tags **among the 80,959 examined on 2370 sites.
-
-In this example, Google added my name to the end of the article title, probably because it was too short.
+Another interesting thing is that Google can rewrite titles for improved clarity and length. According to[ a study by Zyppy](https://zyppy.com/seo/title-tags/google-title-rewrite-study/), **Google rewrote 61.6% of the title tags** among the 80,959 examined on 2370 sites.
 
 There are ways to minimize the chances of having your article title rewritten. However, I usually don't take any action as the changes that Google makes to my titles are typically minor.
 
@@ -195,7 +191,7 @@ Here's an example of the HTML code for a meta description tag:
 </head>
 ```
 
-Actually, **meta description is not a ranking factor.** However, writing a good meta description can attract clicks and increase traffic, so it's important.
+Actually, **meta description is not a ranking factor.** However, writing a good description can attract clicks and increase traffic, so it's important.
 
 To ensure that our meta descriptions are of high quality, Google has provided us with some best practices. These practices include:
 
@@ -228,11 +224,9 @@ There are six different header tags available in HTML. Here is a list of them:
 
 There are a couple of rules to follow when managing headings:
 
-- **Each page should have a unique H1 heading.**
+- Each page should have a unique H1 heading.
 - We should not skip levels in the headings hierarchy. So, we should not use `h4` before `h3`, `h3` before `h2`, and so on.
 - Headings should be associated with relevant content. For instance, creating an `h2` heading that only contains a list of `h3` without any associated text is considered a bad practice.
-
-According to the official Google guidelines, there are additional rules for headers beyond the three mentioned here. However, I believe that the three rules listed above are the most important.
 
 ### #6. Manage Links Effectively
 
@@ -260,7 +254,7 @@ For example, a `nofollow` link would have the following HTML code:
 
 When a user visits your website, a nofollow link looks the same as a regular link. However, for search engines, it has a significant impact.
 
-Google does not transfer **PageRank **across nofollow links, which means that they do not impact the search engine ranking of the destination URL.
+Google does not transfer **PageRank** across nofollow links, which means that they do not impact the search engine ranking of the destination URL.
 
 On the other hand, **dofollow links can help improve your search engine rankings**, especially if they come from other authority websites.
 
@@ -310,7 +304,7 @@ This helps to **avoid duplicate content issues**, as each URL is treated as a se
 A common example of this is a homepage that can have multiple URLs with slightly different variations:
 
 ```html
-- http://www.website.com - https://www.website.com - http://website.com -
+http://www.website.com - https://www.website.com - http://website.com -
 https://website.com
 ```
 
@@ -322,7 +316,7 @@ Here is an example of the HTML code for the canonical tag:
 <link rel="canonical" href="https://example.com" />
 ```
 
-When it comes to canonical tags, there are some best practices that we should keep in mind. One of these practices is to ensure that we **canonicalize the homepage. **This is because, as seen in the example above, it is common to have duplicate versions of the homepage.
+A good practice is ensuring that we **canonicalize the homepage**. That's because, as seen in the example above, it is common to have duplicate versions of the homepage.
 
 ### #9. Meta Robots Tag and Indexing Control
 
@@ -356,8 +350,8 @@ It's crucial that websites are **accessible and fast** so users can use them wit
 
 ## Final Words
 
-As we come to an end, I hope that the SEO tips I shared with you have proven to be helpful. Proper usage of HTML tags can greatly enhance website optimization for SEO objectives.
+I hope that the SEO tips I shared with you were helpful. As you can see, it's not very complicated.
 
-Thank you for taking the time to read this article. I trust it was informative and enjoyable.
+Thank you for taking the time to read this article.
 
 Hope to see you soon!

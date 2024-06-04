@@ -10,7 +10,7 @@ tags: ["Nuxt", "SEO"]
 
 It's a well-known fact, but it bears repeating - **SEO is important**. With [billions of Google searches made daily](https://www.oberlo.com/blog/google-search-statistics), it's certainly beneficial to capture a piece of that pie for your website.
 
-In this article, I'll guide you through optimizing your Nuxt websites for SEO, with a focus on Nuxt 3. However, the principles here can be applied to any framework.
+That's why, today, I'll guide you through optimizing your Nuxt websites for SEO, with a focus on Nuxt 3. However, the principles here can be applied to any framework.
 
 ## Why Is SEO Important?
 
@@ -24,11 +24,11 @@ There are different ways to approach SEO: on-page, off-page, and the technical s
 
 ### Setting Page Title and Meta Description
 
-Well-written page titles and meta descriptions are CRUCIAL for SEO.
+Let's start by talking about well-written page titles and meta descriptions.
 
 When a user visits your webpage, the title is the first impression they get. It should clearly and concisely communicate the content of the page. The same goes for meta description.
-![An example of page titles and descriptions](serp.webp)An example of page titles and descriptions
-Remember, these titles and descriptions influence the click-through rate (CTR), making them vital for driving traffic. They should be unique for each page.
+
+These titles and descriptions influence the click-through rate (CTR), making them importaNT for driving traffic. They should be unique for each page.
 
 In Nuxt 3, you can set page titles and meta descriptions in many different ways. One simple method is the `useHead` composable, where you can define the title and meta within a specific page file:
 
@@ -67,7 +67,7 @@ const description = ref('Meta description..')
 </template>
 ```
 
-These components mirror native HTML elements (like <title> or <head>), so it's crucial to capitalize them in the template.
+**One thing to note:** These components mirror native HTML elements (like <title> or <head>), so it's crucial to capitalize them in the template.
 
 Lastly, there's the `useSeoMeta` composable. While both `useHead` and `useSeoMeta` can set titles and descriptions, `useSeoMeta` is the most recommended method. That's because it's XSS-safe and fully supports TypeScript.
 
@@ -106,38 +106,29 @@ In the provided example, we've set both the title and description as we typicall
 
 The `description` is the snippet that is displayed on the SERP (Search Engine Results Page), giving users a brief overview of what the page contains.
 
-On the other hand, `ogDescription` is tailored to how the content appears when shared on social media platforms. And the `ogImage` provides a visual representation of your content, as it specifies an image URL to be showcased within the social graph.
-
-There are numerous other open graph protocol tags available. For a comprehensive list, you can refer to the link provided below:
-https://ogp.me/
+On the other hand, `ogDescription` is tailored to how the content appears when shared on social media platforms. Lastly, the `ogImage` provides a visual representation of your content, as it specifies an image URL to be showcased within the social graph.
 
 ### Sitemap
 
 A **sitemap** is a file that lists all the different pages, videos, and other files, along with how they relate to one another. Search engines, like Google, use sitemaps to crawl websites more effectively.
 
-Though Google suggests that as long as your site's pages are interlinked properly, most of your content will be discovered by search engine crawlers, having a sitemap is still beneficial. Even if not strictly necessary, there's no harm in having one – better safe than sorry.
+Though Google suggests that as long as your site's pages are interlinked properly, most of your content will be discovered by search engine crawlers, having a sitemap is still beneficial.
+
+Even if not strictly necessary, there's no harm in having one – better safe than sorry.
 
 Now, if you're wondering about creating a sitemap for a Nuxt project, there's a dedicated module for that. It's designed to seamlessly integrate a sitemap into your project.
 
-https://github.com/harlan-zw/nuxt-simple-sitemap
-
-Setting it up is very easy: simply install the module and add it to your Nuxt configuration file.
-
-```js
-export default defineNuxtConfig({
-  modules: ["nuxt-simple-sitemap"],
-});
-```
+`https://github.com/harlan-zw/nuxt-simple-sitemap`
 
 ### Robots.txt
 
 The _robots.txt_ file is another important element to consider for SEO.
 
-Do you absolutely need one? According to Google's documentation, when Googlebot visits a website, it first checks the robots.txt file to ask for permission to crawl. If a site lacks a robots.txt file, robots meta tag, or X-Robots-Tag HTTP headers, it's typically crawled and indexed as usual.
+Do you absolutely need one? According to Google's documentation, when Googlebot visits a website, it first checks the robots.txt file to ask for permission to crawl.
+
+If a site lacks a robots.txt file, robots meta tag, or X-Robots-Tag HTTP headers, it's typically crawled and indexed as usual.
 
 You'd primarily want a _robots.txt_ file if you want to have more control over the crawling process. With _robots.txt_, you can specify pages that you don't want search engines to crawl, ensuring they don't appear in search results.
-
-For those using Nuxt, there's a convenient module available to easily generate a robots.txt file.
 
 ### Images
 
@@ -145,7 +136,7 @@ Images play a significant role in SEO, and there's enough to say that they could
 
 1. **Descriptive Names**: Avoid generic filenames like _qwertyyuiop.png_. Instead, use the descriptive ones like _white-chair-in-the-office.png_.
 2. **Optimize Images**: Compress images and, if possible, use the `webp` format. The goal is to minimize the file size without compromising quality. A faster website translates to a better user experience, which can boost your SEO.
-3. **Alt Attributes**: The primary purpose of alt text is to enhance *accessibility *for those who can't view images. However, it's also an SEO improvement. That's because Google combines alt text, algorithms, and page content to better understand an image's context.
+3. **Alt Attributes**: The primary purpose of alt text is to enhance _accessibility_ for those who can't view images. However, it's also an SEO improvement. That's because Google combines alt text, algorithms, and page content to better understand an image's context.
 4. **Lazy Loading**: Use the loading attribute to ensure off-screen images load only when users scroll to them, enhancing site performance.
 
 Now, when the image is relevant to your content, rely on HTML image elements, like `img` or `picture`. Google won't index CSS images, so they're best used for design aspects unrelated to content.
@@ -173,7 +164,7 @@ Links, like images, have vast implications in SEO. While there are many importan
 <a href="..." rel="nofollow">Some other website</a>
 ```
 
-There are other rel values, too, but most situations might not require anything out of the ordinary. Still, it's beneficial to understand the distinction between _dofollow_ and _nofollow_ links and be aware of other variants.
+There are other rel values, too, but most situations might not require anything out of the ordinary. Still, it's worth to understand the difference between _dofollow_ and _nofollow_ links and be aware of other variants.
 
 ### Proper URL Structure
 
@@ -186,18 +177,6 @@ Also, remember to use hyphens to separate words in URLs. It makes the URL more r
 Complicated URLs, especially if they have several parameters, can be a crawler's nightmare. They might end up indexing numerous URLs that all lead to the same content on your site. This might prevent some of your site's content from being indexed.
 
 **The takeaway** - keep your URLs clear, concise, and descriptive. It's beneficial for both users and search engines.
-
-### Proper HTTP Status Codes and 404 Page
-
-HTTP status codes are three-digit responses from the server, indicating whether a browser's request was successful or encountered an error.
-
-Ensuring the correct status codes are sent is essential for search engines like Google. For example, a 200 status code indicates a successful page load, signaling to search engines that everything is working as expected.
-
-One way to ensure proper management of these codes is by creating a custom error page using an `error.vue` file in the root directory. This custom page will be shown whenever Nuxt encounters a fatal error. Just remember - this isn't a regular route and should be kept separate from the `~/pages` directory.
-
-The error page comes with an error prop that offers comprehensive details about the error. Using fields like `url`, `statusCode`, `statusMessage`, `message`, `description`, and `data` from the error object, you can display relevant error messages to users.
-
-For example, if the error indicates a 404 status, you can show an appropriate "404 Page not Found" message.
 
 ### 301 Redirects
 
@@ -236,7 +215,7 @@ While I've touched upon image optimization, there's more to improving site perfo
 - Streamlining the execution time of your JavaScript.
 - Reducing large data transfers that can slow down page loading.
 
-This area is vast, and going into detail on these topics would take us away from our main focus on Nuxt's technical SEO. But it's important to note that page speed is not just an extra feature; it's essential for good SEO.
+This area is vast, and going into detail on these topics would take us away from our main focus on Nuxt's technical SEO. But it's important to note that page speed is essential for good SEO.
 
 ## Other Types of SEO to Remember
 
@@ -252,7 +231,7 @@ That's a wrap! We've gone through some essential technical SEO aspects to keep i
 
 I trust that this guide has equipped you with the knowledge to make your Nuxt site more SEO-friendly.
 
-If you have any questions or feedback about this article, please don't hesitate to [get in touch through the contact form](https://kajetan.io/contact).
+If you have any questions or feedback about this article, please don't hesitate to get in touch.
 
 Thank you for taking the time to read this.
 
@@ -269,3 +248,4 @@ Sources 🔗:
 - [Nuxt Simple Robots Module](https://nuxtseo.com/robots/getting-started/installation)
 - [Google URL Structure Guidelines](https://developers.google.com/search/docs/crawling-indexing/url-structure)
 - [Nuxt SEO Docs](https://nuxt.com/docs/getting-started/seo-meta)
+  \

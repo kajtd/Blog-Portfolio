@@ -52,7 +52,9 @@ In fact, there are several benefits to using the second choice:
 It will help search engines better understand the content of this element (more on that later).
 Assistive devices, like screen readers, will understand the content better. This is beneficial for people using such devices.
 
-It will improve the overall readability of the code. After all, it's easier to understand the meaning of elements such as the footer, header, main, and nav than just div, div, div.Using semantic HTML won't improve your website's appearance or power. But, it is still necessary due to the benefits above.
+It will improve the overall readability of the code. After all, it's easier to understand the meaning of elements such as the `footer`, `header`, `main`, and `nav` than just `div`, `div`, `div`.
+
+One thing to note: using semantic HTML won't improve your website's appearance or power. But, it is still necessary due to the benefits above.
 
 Obviously, there are a lot of other semantic HTML elements that clearly describe the content within them, like:
 
@@ -81,7 +83,7 @@ Now, let's talk a little bit more about why the proper HTML structure is a must.
 
 When you visit a website, you can easily identify various elements such as the navbar, footer, sidebar, or buttons.
 
-Even by looking at this article, it is clear that this blog post follows a specific structure. The article is on the left, sidebar is on the right, and header navigation is at the top.
+Even by looking at this article, it is clear that this blog post follows a specific structure. The article is in the center and header navigation is at the top.
 
 However, humans aren't the only ones that visit your website.
 
@@ -95,7 +97,7 @@ Also, using elements such as `<nav>`, `<header>`, and `<footer>` can help search
 
 If you're writing a blog post, use `<p>` tags for paragraphs and `<img>` for images. Also, add other elements like lists, figures, or tables to support your content.
 
-Will it have a huge impact on your website's SEO? Although Google can usually understand the web page content, even if the HTML markup is not perfect, using semantic HTML is still a must.
+Will it have a huge impact on your website's SEO? Although Google can usually understand the web page content, even if the HTML markup is not perfect, using semantic HTML is still a good practice.
 
 This is not only for SEO purposes but also for other reasons that we will discuss below.
 
@@ -105,9 +107,9 @@ If you want to make your websites accessible to everyone, then you have to write
 
 When you use semantic HTML, it helps these devices understand the structure of the website, just like search engines do.
 
-For example, if you navigate a website using only the keyboard, you can use the Tab ↹ key. It can help you move between focusable elements such as form elements, buttons, and links.
+For example, if you navigate a website using only the keyboard, you can use the `Tab ↹` key. It can help you move between focusable elements such as form elements, buttons, and links.
 
-These elements will be highlighted and clickable, making it easier to get around the website.Using the `Tab ↹` key to navigate a page
+These elements will be highlighted and clickable, making it easier to get around the website.
 
 If you use the wrong tags, like spans instead of buttons, it can be really hard for some people to move around the site smoothly.
 
@@ -167,7 +169,7 @@ Take a look and compare the two markups. Which one do you find more pleasant to 
 
 The code below is easier to read, right?
 
-Semantic HTML is not primarily intended to improve code readability, but it can have a positive impact on it. So, it is definitely important to use appropriate elements when necessary.Related: Check out my article on improving SEO for Ghost CMS.
+Semantic HTML is not primarily intended to improve code readability, but it can have a positive impact on it. So, it is definitely important to use appropriate elements when necessary.
 
 ## Semantic HTML Cheat Sheet
 
@@ -214,12 +216,6 @@ Here are some of the most popular semantic elements:
   </article>
 </main>
 ```
-
-## FAQ
-
-### Is Semantic HTML a Ranking Factor?
-
-In my opinion, it is always important to use semantic HTML. However, it may not impact SEO unless your website's HTML structure is really poor.
 
 ## Final Words
 

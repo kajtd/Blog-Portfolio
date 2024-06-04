@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto flex flex-col items-center space-y-4 py-8">
-    <AppBadge blue class="w-fit">Content</AppBadge>
+    <AppBadge blue class="w-auto">Content</AppBadge>
     <h4 class="text-2xl text-center md:text-4xl font-medium">
       Featured Articles
     </h4>
