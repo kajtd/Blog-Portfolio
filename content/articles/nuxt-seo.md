@@ -67,7 +67,7 @@ const description = ref('Meta description..')
 </template>
 ```
 
-**One thing to note:** These components mirror native HTML elements (like <title> or <head>), so it's crucial to capitalize them in the template.
+**One thing to note:** These components mirror native HTML elements (like `<title>` or `<head>`), so it's crucial to capitalize them in the template.
 
 Lastly, there's the `useSeoMeta` composable. While both `useHead` and `useSeoMeta` can set titles and descriptions, `useSeoMeta` is the most recommended method. That's because it's XSS-safe and fully supports TypeScript.
 
