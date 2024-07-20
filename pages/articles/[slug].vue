@@ -52,6 +52,6 @@ useHead({
 }
 
 .prose a:not(h2 a, h3 a) {
-  @apply relative inline-block no-underline after:block after:absolute after:bg-blue-500 after:h-0.5 after:left-1/2 after:bottom-0 after:w-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:-translate-x-1/2 after:scale-x-0 after:hover:scale-x-100;
+  @apply text-primary-500;
 }
 </style>
