@@ -20,7 +20,7 @@
       >
         <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
       </button>
-      <h2 class="text font-medium mb-2 mt-3 md:mt-0 text-lg">
+      <h2 class="text font-medium mb-2 mt-3 md:mt-0 text-xl">
         Subscribe to the Newsletter
       </h2>
       <p class="mb-4 text-base text-[#0F132499]">
@@ -37,7 +37,7 @@
       </form>
       <div class="text-center h-4 my-6 border-t border-gray-300/70">
         <p
-          class="text-xs font-medium bg-white text-center relative -top-[16px] p-2 inline-block text-gray-700/80"
+          class="text-xs font-medium bg-white text-center relative -top-[16px] p-2 inline-block text-gray-700/70"
         >
           Last Newsletters [{{ emails.length }}]
         </p>
@@ -47,20 +47,20 @@
           <div
             class="w-10 h-10 rounded-full mr-3 bg-gray-300/30 grid place-items-center"
           >
-            <Icon name="fa:send" class="w-4 h-4 text-gray-500" />
+            <Icon name="fa:send" class="w-4 h-4 text-gray-500/90" />
           </div>
           <div class="flex flex-col gap-1">
             <span class="text-sm text-black">{{ email.subject }}</span>
             <a
               :href="email.absolute_url"
               target="_blank"
-              class="text-blue-500 text-sm"
+              class="text-blue-400 text-xs"
             >
               Link
-              <Icon name="tabler:link" class="w-4 h-4 mb-1" />
+              <Icon name="tabler:link" class="w-3.5 h-3.5 mb-1" />
             </a>
           </div>
-          <span class="text-sm ml-auto text-gray-400/80">{{
+          <span class="text-xs ml-auto text-gray-400/80">{{
             getReadableDate(email.creation_date)
           }}</span>
         </li>
