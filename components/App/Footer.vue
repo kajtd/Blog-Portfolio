@@ -29,13 +29,6 @@
       </div>
     </div>
     <div class="mx-auto max-w-xl pt-12">
-      <NuxtLink to="/">
-        <img
-          src="/Avatar.svg"
-          alt="Kajetan Domagała"
-          class="w-8 h-8 mr-4 transition-all duration-300 hover:ring-2 ring-primary-200 rounded-full hover:scale-125"
-        />
-      </NuxtLink>
       <div class="flex items-center justify-between">
         <div>
           <p class="text-sm text-gray-600/90 font-medium mb-2 mt-12">Links</p>

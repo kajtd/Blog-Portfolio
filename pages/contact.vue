@@ -23,15 +23,15 @@ const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",
     text: "Hi, nice to see you here 🖐",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
     name: "Kajetan",
     text: "How can I help you?",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
-    name: "You 😎",
+    name: "You",
     avatar: "/user-avatar.svg",
     text: "Is there a way to contact you?",
   },
@@ -46,10 +46,10 @@ const queuedMessages = ref<Message[]>([
       icon: "fa:send",
       href: "mailto:contact@kajetan.io",
     },
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
-    name: "You 😎",
+    name: "You",
     avatar: "/user-avatar.svg",
     text: "Thanks!",
   },

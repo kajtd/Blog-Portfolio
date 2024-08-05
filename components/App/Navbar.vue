@@ -15,9 +15,9 @@
         <li>
           <NuxtLink to="/">
             <img
-              src="/Avatar.svg"
+              src="/my-avatar.png"
               alt="Kajetan Domagała"
-              class="w-8 h-8 mr-4 transition-all duration-300 hover:ring-2 ring-primary-200 rounded-full hover:scale-125"
+              class="w-8 h-8 mr-4 transition-all duration-300 rounded-full hover:scale-110"
             />
           </NuxtLink>
         </li>

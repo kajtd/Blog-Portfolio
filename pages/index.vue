@@ -27,22 +27,22 @@ const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",
     text: "Hello, thank you for checking out my website!",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
     name: "Kajetan",
     text: "First, let me introduce myself...",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
     name: "Kajetan",
     text: "I'm a web developer based in Poland. I like building apps and documenting my journey through written content.",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
     name: "Kajetan",
     text: "If you’d like to check out my work or articles, just scroll down!",
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
   {
     name: "You 😎",
@@ -61,7 +61,7 @@ const queuedMessages = ref<Message[]>([
       href: "mailto:contact@kajetan.io",
       icon: "fa:send",
     },
-    avatar: "/Avatar.svg",
+    avatar: "/my-avatar.png",
   },
 ]);
 </script>
