@@ -77,9 +77,6 @@
         <Icon name="prime:twitter" class="w-4 h-4 text-gray-500/80"></Icon>
       </a>
     </div>
-    <p class="mt-6 text-sm text-gray-600/70 mx-auto max-w-xl">
-      © {{ currentYear }} Kajetan Domagała. All rights reserved.
-    </p>
   </footer>
 </template>
 
