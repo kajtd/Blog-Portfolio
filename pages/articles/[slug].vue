@@ -43,7 +43,8 @@ useHead({
 }
 
 .prose article > div > p,
-.prose article > div > ul > li {
+.prose article > div > ul > li,
+.prose article > div > ol > li {
   @apply text-black text-sm sm:text-base md:text-lg;
 }
 
