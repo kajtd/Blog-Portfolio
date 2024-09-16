@@ -27,18 +27,13 @@ const queuedMessages = ref<Message[]>([
   },
   {
     name: "Kajetan",
-    text: "How can I help you?",
+    html: "<p>If you've come on this page, you probably want to contact me. Just send me a message at <a href='mailto:contact@kajetan.io' class='text-blue-500 underline'>contact@kajetan.io</a></p>",
     avatar: "/my-avatar.png",
-  },
-  {
-    name: "You",
-    avatar: "/user-avatar.svg",
-    text: "Is there a way to contact you?",
   },
   {
     name: "Kajetan",
     component: ButtonComponent,
-    html: `<p>Sure!</p><p>Just use my email: contact@kajetan.io</p><p>Feel free to reach out to me if you need anything.</p><br /><p class="text-gray-500/90 text-sm font-regular">You can also just click the button below 👇</p>`,
+    html: `<p>Feel free to reach out to me if you need anything.</p><br /><p class="text-gray-500/90 text-sm font-regular">You can also click the button below 👇</p>`,
     props: {
       slot: "Drop me a message!",
       secondary: true,
@@ -47,11 +42,6 @@ const queuedMessages = ref<Message[]>([
       href: "mailto:contact@kajetan.io",
     },
     avatar: "/my-avatar.png",
-  },
-  {
-    name: "You",
-    avatar: "/user-avatar.svg",
-    text: "Thanks!",
   },
 ]);
 </script>

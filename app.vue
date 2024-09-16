@@ -38,7 +38,7 @@ const route = useRoute();
 
 const isArticle = computed(() => {
   // Check if the current route is an article
-  return route.path.startsWith("/articles/");
+  return /^\/articles\/.+/.test(route.path);
 });
 </script>
 

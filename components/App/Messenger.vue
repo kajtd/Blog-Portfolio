@@ -115,7 +115,7 @@ const processMessages = () => {
         processMessages();
       }, 1000);
     }
-  }, 1500);
+  }, 2500);
 };
 
 onMounted(() => {

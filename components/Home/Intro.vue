@@ -57,12 +57,12 @@
     <div v-show="isNewsletterBoxVisible" class="px-4 py-3 space-y-6">
       <div class="flex flex-col">
         <p class="text-base md:text-lg font-medium">
-          Building apps while having fun
+          Your are just one click away.
         </p>
         <p class="text-xs md:text-sm text-gray-600/80">
-          Tips and updates on no, low and full-code.
+          For my thoughts and updates on no, low and full-code.
           <br />
-          Writing on app development, productivity and SaaS.
+          I'm also sharing different tools and resources I find useful.
         </p>
       </div>
       <form class="block md:hidden" @submit.prevent="subscribeToNewsletter">
