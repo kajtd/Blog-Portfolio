@@ -55,4 +55,8 @@ useHead({
 .prose a:not(h2 a, h3 a) {
   @apply text-primary-500;
 }
+
+.prose > article > div > img {
+  @apply w-full rounded-lg shadow-sm border border-gray-300/70;
+}
 </style>
