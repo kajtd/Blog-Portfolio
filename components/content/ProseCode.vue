@@ -15,7 +15,7 @@ const colors = ["bg-primary-600/70", "bg-primary-500/70", "bg-primary-400/70"];
 
 <template>
   <div
-    class="code-wrapper relative my-4 overflow-hidden rounded-xl shadow border-gray-300/90 border bg-white"
+    class="code-wrapper relative my-4 overflow-hidden rounded-xl border-gray-300/90 border bg-white"
   >
     <header
       class="w-full flex items-center justify-between py-2 px-4 z-50 border-b border-gray-300/90"
