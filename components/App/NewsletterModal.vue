@@ -88,34 +88,51 @@ const {
   alertDescription,
   subscribeToNewsletter,
 } = useNewsletterSubscription();
+
 const emails = ref<Email[]>([]);
+
+const fetchAndCacheEmails = async (): Promise<Email[]> => {
+  const response = await fetch("/api/fetchEmails");
+  if (!response.ok) {
+    throw new Error("Failed to fetch");
+  }
+  const data: Email[] = await response.json();
+  sessionStorage.setItem("cachedEmails", JSON.stringify(data));
+  return data;
+};
+
+const getCachedEmails = (): Email[] | null => {
+  const cachedData = sessionStorage.getItem("cachedEmails");
+  return cachedData ? JSON.parse(cachedData) : null;
+};
+
 watch(
   () => props.isModalVisible,
-  async (newValue, oldValue) => {
-    if (newValue === true) {
+  async (newValue) => {
+    if (newValue) {
       loading.value = true;
 
       // Start the timer
       const timer = new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Fetch the emails
-      const fetchEmails = async (): Promise<Email[]> => {
-        const response = await fetch("/api/fetchEmails");
-        if (!response.ok) {
-          throw new Error("Failed to fetch");
-        }
-        const data: Email[] = await response.json();
-        return data;
-      };
+      let emailResults: Email[];
+      const cachedEmails = getCachedEmails();
 
-      // Run the fetch and the timer in parallel
-      const [emailResults] = await Promise.all([fetchEmails(), timer]);
+      if (cachedEmails) {
+        emailResults = cachedEmails;
+      } else {
+        emailResults = await fetchAndCacheEmails();
+      }
+
+      // Wait for both the timer and email fetching (if needed) to complete
+      await timer;
 
       emails.value = emailResults;
       loading.value = false;
     }
   }
 );
+
 const closeModal = () => {
   emit("update:isModalVisible", false);
 };
