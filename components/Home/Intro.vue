@@ -60,7 +60,7 @@
           Your are just one click away.
         </p>
         <p class="text-xs md:text-sm text-gray-600/80">
-          For my thoughts and updates on no, low and full-code.
+          For tips and updates on no, low and full-code.
           <br />
           I'm also sharing different tools and resources I find useful.
         </p>
