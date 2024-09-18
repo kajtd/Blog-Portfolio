@@ -27,7 +27,12 @@ const queuedMessages = ref<Message[]>([
   },
   {
     name: "Kajetan",
-    html: "<p>If you've come on this page, you probably want to contact me. Just send me a message at <a href='mailto:contact@kajetan.io' class='text-blue-500 underline'>contact@kajetan.io</a></p>",
+    html: "<p>If you've come on this page, you probably want to contact me.</p>",
+    avatar: "/my-avatar.png",
+  },
+  {
+    name: "Kajetan",
+    html: "<p>Just send me a message at <a href='mailto:contact@kajetan.io' class='text-blue-500 underline'>contact@kajetan.io</a></p>",
     avatar: "/my-avatar.png",
   },
   {
