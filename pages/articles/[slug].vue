@@ -57,6 +57,6 @@ useHead({
 }
 
 .prose > article > div > img {
-  @apply w-full rounded-lg shadow-sm border border-gray-300/70;
+  @apply w-full rounded-lg ring-gray-300/70;
 }
 </style>
