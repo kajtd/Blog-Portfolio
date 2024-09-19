@@ -20,11 +20,12 @@ defineProps<{
         <p class="text-sm m-0">{{ description }}</p>
       </div>
       <AppButton
-        :to="url"
+        :href="url"
         secondary
         tailIcon="mdi:github"
         iconClass="w-4 h-4"
-        class="mt-auto"
+        class="mt-auto no-underline"
+        target="_blank"
       >
         See the code
       </AppButton>
