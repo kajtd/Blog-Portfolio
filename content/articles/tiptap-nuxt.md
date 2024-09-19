@@ -19,7 +19,7 @@ Here is the final result:
 
 And here is the code on GitHub. If you find this article helpful, feel free to give it a star ⭐
 
-::code-bookmark{img="/articles/tiptap-nuxt/tiptap-nuxt-thumbnail.webp" title="Github Code" description="Check out and clone the code on Github to see all the details. For simplicity, some of the code is not included in the article."}
+::code-bookmark{ url="https://github.com/kajtd/text-editor-nuxt" img="/articles/tiptap-nuxt/tiptap-nuxt-thumbnail.webp" title="Github Code" description="Check out and clone the code on Github to see all the details. For simplicity, some of the code is not included in the article."}
 ::
 
 ## What We'll Build
@@ -324,10 +324,6 @@ onBeforeUnmount(() => {
 });
 </script>
 ```
-
-This is how our editor looks now:
-
-<img src="/articles/tiptap-nuxt/tiptap-styles.webp" alt="Tiptap default view" />
 
 Now, let's move on to creating a toolbar, which is a crucial part of every text editor.
 
@@ -676,7 +672,7 @@ const editor = useEditor({
 
 Here is how the placeholder looks:
 
-<img src="/articles/tiptap-nuxt/tiptap-placeholder.webp" alt="Tiptap placeholder" />
+<img src="/articles/tiptap-nuxt/editor-placeholder.webp" alt="Tiptap placeholder" />
 
 Ok, so now we need to actually add this menu.
 
@@ -1161,7 +1157,7 @@ By adding `ImageUpload` to our extensions array, we enable the custom image func
 
 The result? Users can easily add images to their content, complete with captions and alt text, making the content more visually appealing.
 
-<img src="/images/tiptap/image-upload.webp" alt="Image Upload" />
+<img src="/articles/tiptap-nuxt/editor-image.webp" alt="Image Upload" />
 
 This setup gives us a solid foundation for handling images in our editor. In the future, we could expand on this by adding image resizing, alignment options, or even integrating with a cloud storage service for better image management.
 
@@ -1275,7 +1271,7 @@ const selectLanguage = (event: Event) => {
 
 This component adds a language selector to each code block, allowing users to specify the programming language for more accurate syntax highlighting.
 
-<img src="/images/tiptap/code-block.webp" alt="Code Blocks in TipTap" />
+<img src="/articles/tiptap-nuxt/editor-code-block.webp" alt="Code Blocks in TipTap" />
 
 Here's a breakdown of how it works:
 
