@@ -144,7 +144,7 @@ onBeforeUnmount(() => {
 
 Congratulations! 🎉 You should now see the Tiptap editor in your browser.
 
-<img src="/articles/tiptap-nuxt/test.png" alt="Tiptap default view" />
+<img src="/articles/tiptap-nuxt/test.png" alt="Tiptap default view" loading="lazy" />
 
 Even this minimal setup offers many handy built-in features, such as handling keyboard shortcuts to make text bold or italic.
 
@@ -672,7 +672,7 @@ const editor = useEditor({
 
 Here is how the placeholder looks:
 
-<img src="/articles/tiptap-nuxt/editor-placeholder.webp" alt="Tiptap placeholder" />
+<img src="/articles/tiptap-nuxt/editor-placeholder.webp" alt="Tiptap placeholder" loading="lazy" />
 
 Ok, so now we need to actually add this menu.
 
@@ -1157,7 +1157,7 @@ By adding `ImageUpload` to our extensions array, we enable the custom image func
 
 The result? Users can easily add images to their content, complete with captions and alt text, making the content more visually appealing.
 
-<img src="/articles/tiptap-nuxt/editor-image.webp" alt="Image Upload" />
+<img src="/articles/tiptap-nuxt/editor-image.webp" alt="Image Upload" loading="lazy" />
 
 This setup gives us a solid foundation for handling images in our editor. In the future, we could expand on this by adding image resizing, alignment options, or even integrating with a cloud storage service for better image management.
 
@@ -1271,7 +1271,7 @@ const selectLanguage = (event: Event) => {
 
 This component adds a language selector to each code block, allowing users to specify the programming language for more accurate syntax highlighting.
 
-<img src="/articles/tiptap-nuxt/editor-code-block.webp" alt="Code Blocks in TipTap" />
+<img src="/articles/tiptap-nuxt/editor-code-block.webp" alt="Code Blocks in TipTap" loading="lazy" />
 
 Here's a breakdown of how it works:
 
