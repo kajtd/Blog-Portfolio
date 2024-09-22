@@ -49,7 +49,7 @@
           >
             <Icon name="fa:send" class="w-4 h-4 text-gray-500/90" />
           </div>
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col gap-1 pr-2">
             <span class="text-sm text-black">{{ email.subject }}</span>
             <a
               :href="email.absolute_url"
