@@ -3,7 +3,7 @@
     <div
       class="w-full max-w-3xl mx-auto prose prose-blockquote:not-italic prose-img:ring-1 prose-img:ring-gray-200 prose-img:rounded-lg prose-pre:bg-white"
     >
-      <ContentDoc v-slot="{ doc }" tag="article">
+      <LazyContentDoc v-slot="{ doc }" tag="article">
         <article class="p-4 md:p-10 nuxt-content w-full mx-auto">
           <AppBadge
             blue
@@ -14,10 +14,15 @@
           <h1 class="text-center font-semibold text-3xl md:text-4xl">
             {{ doc.title }}
           </h1>
-          <img :src="doc.img" :alt="doc.title" class="rounded-3xl w-full" />
-          <ContentRenderer :value="doc" />
+          <img
+            :src="doc.img"
+            :alt="doc.title"
+            class="rounded-3xl w-full"
+            loading="lazy"
+          />
+          <LazyContentRenderer :value="doc" />
         </article>
-      </ContentDoc>
+      </LazyContentDoc>
     </div>
   </main>
 </template>
@@ -67,5 +72,14 @@ useHead({
 
 .prose > article > div > img {
   @apply w-full rounded-lg ring-gray-300/70;
+}
+
+@media (max-width: 370px) {
+  .prose article > div > ul {
+    padding-inline-start: 0.5em;
+  }
+  .prose article > div > ul > li {
+    padding-inline-start: 0;
+  }
 }
 </style>
