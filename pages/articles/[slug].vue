@@ -32,7 +32,8 @@ useHead({
 </script>
 <style>
 .prose h2 a,
-.prose h3 a {
+.prose h3 a,
+.prose h4 a {
   @apply no-underline;
 }
 .prose h2[id] {
@@ -41,6 +42,9 @@ useHead({
 .prose h3[id] {
   @apply text-xl md:text-3xl font-medium;
 }
+.prose h4[id] {
+  @apply text-lg md:text-2xl font-medium;
+}
 
 .prose article > div > p,
 .prose article > div > ul > li,
@@ -48,11 +52,16 @@ useHead({
   @apply text-black text-sm sm:text-base md:text-lg;
 }
 
+.prose article > div > ul,
+.prose article > div > ol {
+  @apply w-full;
+}
+
 .prose code:not(pre code) {
   @apply before:hidden after:hidden border-gray-300/90 border shadow-sm p-1 px-2 rounded-lg m-1;
 }
 
-.prose a:not(h2 a, h3 a) {
+.prose a:not(h2 a, h3 a, h4 a) {
   @apply text-primary-500;
 }
 

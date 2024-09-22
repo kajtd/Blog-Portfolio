@@ -10,11 +10,11 @@ tags: ["Nuxt", "SEO"]
 
 It's a well-known fact, but it bears repeating - **SEO is important**. With [billions of Google searches made daily](https://www.oberlo.com/blog/google-search-statistics), it's certainly beneficial to capture a piece of that pie for your website.
 
-That's why, today, I'll guide you through optimizing your Nuxt websites for SEO, with a focus on Nuxt 3. However, the principles here can be applied to any framework.
+That's why, today, I'll guide you through optimizing your Nuxt websites for SEO, with a focus on Nuxt 3. However, the principles here can be applied to other frameworks and languages.
 
 ## Why Is SEO Important?
 
-Search engine optimization, or SEO, involves optimizing your website's content and setup to boost its presence in search engine rankings.
+Search engine optimization, or SEO, basically means optimizing your website's content and setup to boost its presence in search engine rankings.
 
 Organic searches play a huge role in introducing people to your brand, and that's one of the reasons why creating SEO-friendly websites is so important.
 
@@ -22,9 +22,11 @@ There are different ways to approach SEO: on-page, off-page, and the technical s
 
 ## Optimizing SEO with Nuxt
 
+Let's start with the basics:
+
 ### Setting Page Title and Meta Description
 
-Let's start by talking about well-written page titles and meta descriptions.
+First, we'll start by talking about well-written page titles and meta descriptions.
 
 When a user visits your webpage, the title is the first impression they get. It should clearly and concisely communicate the content of the page. The same goes for meta description.
 
@@ -67,7 +69,7 @@ const description = ref('Meta description..')
 </template>
 ```
 
-**One thing to note:** These components mirror native HTML elements (like `<title>` or `<head>`), so it's crucial to capitalize them in the template.
+**One thing to note:** The components above mirror native HTML elements (like `<title>` or `<head>`), so it's crucial to capitalize them in the template.
 
 Lastly, there's the `useSeoMeta` composable. While both `useHead` and `useSeoMeta` can set titles and descriptions, `useSeoMeta` is the most recommended method. That's because it's XSS-safe and fully supports TypeScript.
 
@@ -79,6 +81,8 @@ Lastly, there's the `useSeoMeta` composable. While both `useHead` and `useSeoMet
   })
 </script>
 ```
+
+It's also important to remember to set title and meta descriptions for dynamic content (for example if you are using Nuxt Content).
 
 ### Open Graph Meta Tags
 
@@ -108,6 +112,8 @@ The `description` is the snippet that is displayed on the SERP (Search Engine Re
 
 On the other hand, `ogDescription` is tailored to how the content appears when shared on social media platforms. Lastly, the `ogImage` provides a visual representation of your content, as it specifies an image URL to be showcased within the social graph.
 
+OG tags are quite important, especially if you expect your content to be shared on social media.
+
 ### Sitemap
 
 A **sitemap** is a file that lists all the different pages, videos, and other files, along with how they relate to one another. Search engines, like Google, use sitemaps to crawl websites more effectively.
@@ -118,7 +124,8 @@ Even if not strictly necessary, there's no harm in having one – better safe th
 
 Now, if you're wondering about creating a sitemap for a Nuxt project, there's a dedicated module for that. It's designed to seamlessly integrate a sitemap into your project.
 
-`https://github.com/harlan-zw/nuxt-simple-sitemap`
+::link-bookmark{url="https://github.com/harlan-zw/nuxt-simple-sitemap" title="Sitemap in Nuxt" description="Nuxt module for easy sitemap generation"}
+::
 
 ### Robots.txt
 
@@ -129,6 +136,50 @@ Do you absolutely need one? According to Google's documentation, when Googlebot 
 If a site lacks a robots.txt file, robots meta tag, or X-Robots-Tag HTTP headers, it's typically crawled and indexed as usual.
 
 You'd primarily want a _robots.txt_ file if you want to have more control over the crawling process. With _robots.txt_, you can specify pages that you don't want search engines to crawl, ensuring they don't appear in search results.
+
+That being said, creating a robots.txt file is pretty simple. You just need to specify the pages you want to allow or disallow and add this file in the `public` directory.
+
+```bash
+User-agent: *
+Disallow:
+```
+
+### 301 Redirects
+
+You can also use redirects to handle HTTP status codes. Redirects, especially 301 (Permanent Redirect), play a vital role in SEO. A 301 redirect ensures that the link equity from an old URL is passed on to the new URL.
+
+Implementing a 301 redirect is recommended when:
+
+- A page has been deleted, and there's another relevant page you'd like to redirect users to.
+- You've modified the URL of an already published page.
+- You're altering your URL structure, like removing the 'www' prefix.
+
+How do you create a redirect in Nuxt? Middleware is one option, but another effective way is using `routeRules` within the Nuxt configuration like this:
+
+```js
+export default defineNuxtConfig({
+  routeRules: {
+    "/some-old-page": {
+      redirect: {
+        to: "/new-page",
+        statusCode: 301,
+      },
+    },
+  },
+});
+```
+
+### Proper URL Structure
+
+Having the right URL structure is more important than it might seem at first glance. There are plenty of articles with URLs that are a mile long, stuffed with the full title, dates, and even random numbers. However, this is not the best way to handle that.
+
+Try to keep your URLs simple and descriptive. For example, `https://www.example.com/seo-guide` is much more appealing than a lengthy, complicated URL.
+
+Also, remember to use hyphens to separate words in URLs. It makes the URL more readable both for search engines and users, so _"seo-guide"_ is more effective than _"seo_guide"_ or _"seoguide"_.
+
+Complicated URLs, especially if they have several parameters, can be a crawler's nightmare. They might end up indexing numerous URLs that all lead to the same content on your site. This might prevent some of your site's content from being indexed.
+
+**The takeaway** - keep your URLs clear, concise, and descriptive. It's beneficial for both users and search engines.
 
 ### Images
 
@@ -165,43 +216,6 @@ Links, like images, have vast implications in SEO. While there are many importan
 ```
 
 There are other rel values, too, but most situations might not require anything out of the ordinary. Still, it's worth to understand the difference between _dofollow_ and _nofollow_ links and be aware of other variants.
-
-### Proper URL Structure
-
-Having the right URL structure is more important than it might seem at first glance. There are plenty of articles with URLs that are a mile long, stuffed with the full title, dates, and even random numbers. However, this is not the best way to handle that.
-
-Try to keep your URLs simple and descriptive. For example, `https://www.example.com/seo-guide` is much more appealing than a lengthy, complicated URL.
-
-Also, remember to use hyphens to separate words in URLs. It makes the URL more readable both for search engines and users, so _"seo-guide"_ is more effective than _"seo_guide"_ or _"seoguide"_.
-
-Complicated URLs, especially if they have several parameters, can be a crawler's nightmare. They might end up indexing numerous URLs that all lead to the same content on your site. This might prevent some of your site's content from being indexed.
-
-**The takeaway** - keep your URLs clear, concise, and descriptive. It's beneficial for both users and search engines.
-
-### 301 Redirects
-
-You can also use redirects to handle HTTP status codes. Redirects, especially 301 (Permanent Redirect), play a vital role in SEO. A 301 redirect ensures that the link equity from an old URL is passed on to the new URL.
-
-Implementing a 301 redirect is recommended when:
-
-- A page has been deleted, and there's another relevant page you'd like to redirect users to.
-- You've modified the URL of an already published page.
-- You're altering your URL structure, like removing the 'www' prefix.
-
-How do you create a redirect in Nuxt? Middleware is one option, but another effective way is using `routeRules` within the Nuxt configuration like this:
-
-```js
-export default defineNuxtConfig({
-  routeRules: {
-    "/some-old-page": {
-      redirect: {
-        to: "/new-page",
-        statusCode: 301,
-      },
-    },
-  },
-});
-```
 
 ### Page Speed and Mobile Optimization
 

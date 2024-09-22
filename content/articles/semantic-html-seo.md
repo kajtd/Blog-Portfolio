@@ -54,7 +54,7 @@ Assistive devices, like screen readers, will understand the content better. This
 
 It will improve the overall readability of the code. After all, it's easier to understand the meaning of elements such as the `footer`, `header`, `main`, and `nav` than just `div`, `div`, `div`.
 
-One thing to note: using semantic HTML won't improve your website's appearance or power. But, it is still necessary due to the benefits above.
+One thing to note: using semantic HTML won't improve your website's appearance or performance. But, it is still necessary due to the benefits above.
 
 Obviously, there are a lot of other semantic HTML elements that clearly describe the content within them, like:
 
@@ -219,4 +219,8 @@ Here are some of the most popular semantic elements:
 
 ## Final Words
 
-Thanks for checking out this article! Semantic HTML is definitely an important topic. It can be approached from different perspectives. Developers, SEOs, and website owners can all benefit from it.
+Thank you for checking out this article! Semantic HTML is definitely an important topic that can be approached from different perspectives. Developers, SEOs, and website owners can all benefit from it.
+
+If you enjoyed this article, consider subscribing to the newsletter or sharing it.
+
+Thanks and see you in the next one!
