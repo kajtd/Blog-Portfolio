@@ -48,6 +48,7 @@ export default defineNuxtConfig({
           src: "https://cdn-cookieyes.com/client_data/825c9ba7763a5f79a48f4ce7/script.js",
         },
       ],
+      title: "Blog & Portfolio",
     },
   },
   content: {
