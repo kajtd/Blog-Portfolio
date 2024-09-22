@@ -69,7 +69,7 @@
               {{ item.name }}
             </button>
           </li>
-          <li>
+          <li class="py-2">
             <AppButton @click="openNewsletterModal" icon="fa:send">
               Newsletter
             </AppButton>
