@@ -144,8 +144,6 @@ onBeforeUnmount(() => {
 
 Congratulations! 🎉 You should now see the Tiptap editor in your browser.
 
-<img src="/articles/tiptap-nuxt/test.png" alt="Tiptap default view" loading="lazy" />
-
 Even this minimal setup offers many handy built-in features, such as handling keyboard shortcuts to make text bold or italic.
 
 You can also use different types of content like headings, bullet lists, or blockquotes.
