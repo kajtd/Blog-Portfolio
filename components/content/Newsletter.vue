@@ -11,11 +11,10 @@
   >
     <div class="px-4">
       <div class="flex flex-col">
-        <p class="text-lg font-medium mb-0">Building apps while having fun</p>
+        <p class="text-lg font-medium mb-0">Subscribe to the newsletter</p>
         <p class="text-sm text-gray-600/80">
-          Building applications and websites using no, low and full-code.
-          <br />
-          Writing on app development, productivity and SaaS.
+          I'm writing on application development, checking out tools to make it
+          faster, and sharing updates along the way.
         </p>
       </div>
       <form @submit.prevent="subscribeToNewsletter">
