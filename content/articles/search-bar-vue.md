@@ -1,6 +1,6 @@
 ---
 title: Creating a Simple Search Bar with Keyboard Navigation in Vue
-description: "Learn how to create a search bar with keyboard navigation in Vue.js. This tutorial covers the basics of setting up a search component, handling input, and adding keyboard navigation for a better user experience."
+description: "Check out how to create a search bar with a custom keyboard navigation that can fit pretty much any website."
 slug: search-bar-vue
 img: "/articles/search-bar/search-bar-vue.webp"
 published: 2024/10/13
