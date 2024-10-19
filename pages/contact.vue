@@ -19,6 +19,16 @@ useHead({
   },
 });
 
+useSeoMeta({
+  title: "Contact - Kajetan Domagała",
+  ogTitle: "Contact - Kajetan Domagała",
+  description: "Contact me if there is anything you want to discuss.",
+  ogDescription:
+    "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
+  ogImage: "https://kajetan.io/my-avatar.png",
+  twitterCard: "summary_large_image",
+});
+
 const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",

@@ -9,7 +9,15 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@vueuse/nuxt",
     "nuxt-newsletter",
+    "@nuxtjs/seo",
   ],
+  site: {
+    url: "https://kajetan.io",
+    name: "Blog & Portfolio",
+    description:
+      "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
+    defaultLocale: "en",
+  },
   runtimeConfig: {
     public: {},
     private: {

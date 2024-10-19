@@ -23,6 +23,17 @@ useHead({
   },
 });
 
+useSeoMeta({
+  title: "Blog & Portfolio",
+  ogTitle: "Blog & Portfolio",
+  description:
+    "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
+  ogDescription:
+    "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
+  ogImage: "https://kajetan.io/my-avatar.png",
+  twitterCard: "summary_large_image",
+});
+
 const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",
