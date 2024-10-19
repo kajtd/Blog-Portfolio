@@ -30,7 +30,7 @@ useSeoMeta({
     "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
   ogDescription:
     "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
-  ogImage: "https://kajetan.io/my-avatar.png",
+  ogImage: "https://kajetan.io/my-avatar.webp",
   twitterCard: "summary_large_image",
 });
 
@@ -38,22 +38,22 @@ const queuedMessages = ref<Message[]>([
   {
     name: "Kajetan",
     text: "Hello, thank you for checking out my website!",
-    avatar: "/my-avatar.png",
+    avatar: "/my-avatar.webp",
   },
   {
     name: "Kajetan",
     text: "First, let me introduce myself...",
-    avatar: "/my-avatar.png",
+    avatar: "/my-avatar.webp",
   },
   {
     name: "Kajetan",
     text: "I'm a web developer based in Poland. I like building apps and documenting my journey through written content.",
-    avatar: "/my-avatar.png",
+    avatar: "/my-avatar.webp",
   },
   {
     name: "Kajetan",
     text: "If you’d like to check out my work or articles, just scroll down!",
-    avatar: "/my-avatar.png",
+    avatar: "/my-avatar.webp",
   },
   {
     name: "You 😎",
@@ -72,7 +72,7 @@ const queuedMessages = ref<Message[]>([
       href: "mailto:contact@kajetan.io",
       icon: "fa:send",
     },
-    avatar: "/my-avatar.png",
+    avatar: "/my-avatar.webp",
   },
 ]);
 </script>

@@ -15,7 +15,7 @@
         <li>
           <NuxtLink to="/">
             <img
-              src="/my-avatar.png"
+              src="/my-avatar.webp"
               alt="Kajetan Domagała"
               class="w-8 h-8 mr-4 transition-all duration-300 rounded-full hover:scale-110"
             />

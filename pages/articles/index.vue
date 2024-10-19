@@ -45,7 +45,7 @@ useSeoMeta({
     "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
   ogDescription:
     "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
-  ogImage: "https://kajetan.io/my-avatar.png",
+  ogImage: "https://kajetan.io/my-avatar.webp",
   twitterCard: "summary_large_image",
 });
 

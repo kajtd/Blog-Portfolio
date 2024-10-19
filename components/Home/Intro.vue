@@ -14,7 +14,7 @@
     >
       <div class="flex gap-2">
         <img
-          src="/my-avatar.png"
+          src="/my-avatar.webp"
           alt="Kajetan Domagała"
           class="w-8 h-8 rounded-full"
         />
