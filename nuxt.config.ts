@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       },
       script: [
         {
-          src: "https://cdn-cookieyes.com/client_data/825c9ba7763a5f79a48f4ce7/script.js",
+          src: "https://cdn-cookieyes.com/client_data/f04527b7528b86eaf10d241d/script.js",
         },
       ],
       title: "Blog & Portfolio",
