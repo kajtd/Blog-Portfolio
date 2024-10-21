@@ -124,7 +124,7 @@ Keep in mind that I've also added two icon components from [Lucide](https://luci
 
 Below our search bar, we display articles grouped by their creation date. Instead of showing a plain list, we've organized the search results into categories. Here's how it looks:
 
-<img src="/articles/search-bar/search-bar-article-list.webp" alt="Search Bar Vue Article List" />
+![Search Bar Vue Article List](/articles/search-bar/search-bar-article-list.webp)
 
 ```jsx
   <template
@@ -378,7 +378,7 @@ watch(selectedArticleId, () => {
 
 This watcher checks if the selected article is the last one in the list. If it is, then we just load more articles.
 
-We also need to initialize the articles when the search bar is opened. It also can be done without a watcher, as a function that triggers when the search bar is opened.
+Now, we need to initialize the articles when the search bar is opened. It also could be done without a watcher, as a function that triggers when the search bar is opened.
 
 ```jsx
 watch(
