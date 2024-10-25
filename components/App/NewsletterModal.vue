@@ -18,7 +18,7 @@
         class="absolute top-3 right-3 bg-gray-300/30 rounded-full w-6 h-6 grid place-items-center ring-offset-2 hover:ring-2 hover:ring-primary-300 transition-all duration-300"
         @click="closeModal"
       >
-        <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
+        <AppIcon name="close-fill" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
       </button>
       <h2 class="text font-medium mb-2 mt-3 md:mt-0 text-xl">
         Subscribe to the Newsletter
@@ -47,7 +47,7 @@
           <div
             class="w-10 h-10 rounded-full mr-3 bg-gray-300/30 grid place-items-center"
           >
-            <Icon name="fa:send" class="w-4 h-4 text-gray-500/90" />
+            <AppIcon name="send" class="w-4 h-4 text-gray-500/90" />
           </div>
           <div class="flex flex-col gap-1 pr-2">
             <span class="text-sm text-black">{{ email.subject }}</span>
@@ -57,12 +57,13 @@
               class="text-blue-400 text-xs"
             >
               Link
-              <Icon name="tabler:link" class="w-3.5 h-3.5 mb-1" />
+              <AppIcon name="link" class="w-3.5 h-3.5 mb-1" />
             </a>
           </div>
-          <span class="text-xs ml-auto text-gray-400/80">{{
-            getReadableDate(email.creation_date)
-          }}</span>
+          <span
+            class="text-xs text-right flex-1 w-full text-nowrap text-gray-400/80"
+            >{{ getReadableDate(email.creation_date) }}</span
+          >
         </li>
       </ul>
     </div>

@@ -39,8 +39,8 @@ const colors = ["bg-primary-600/70", "bg-primary-500/70", "bg-primary-400/70"];
         class="ml-auto flex justify-end !p-0 w-8"
         @click="copy(code)"
       >
-        <Icon v-if="copied" name="akar-icons:check" class="text-black" />
-        <Icon v-else name="akar-icons:copy" class="text-black" />
+        <AppIcon v-if="copied" name="check" class="text-gray-700/50 w-4 h-4" />
+        <AppIcon v-else name="copy" class="text-gray-700/50 w-4 h-4" />
       </AppButton>
     </header>
     <slot />

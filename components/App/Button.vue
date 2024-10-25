@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { IconName } from "~/types/iconNames";
 interface Props {
   href?: string;
   disabled?: boolean;
@@ -6,8 +7,8 @@ interface Props {
   secondary?: boolean;
   tertiary?: boolean;
   small?: boolean;
-  icon?: string;
-  tailIcon?: string;
+  icon?: IconName;
+  tailIcon?: IconName;
   iconClass?: string;
 }
 
@@ -28,8 +29,13 @@ defineProps<Props>();
       },
     ]"
   >
-    <Icon v-if="icon" :name="icon" class="w-3 h-3" :class="iconClass" />
+    <AppIcon v-if="icon" :name="icon" class="w-3 h-3" :class="iconClass" />
     <slot></slot>
-    <Icon v-if="tailIcon" :name="tailIcon" class="w-3 h-3" :class="iconClass" />
+    <AppIcon
+      v-if="tailIcon"
+      :name="tailIcon"
+      class="w-3 h-3"
+      :class="iconClass"
+    />
   </component>
 </template>

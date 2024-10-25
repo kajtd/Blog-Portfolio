@@ -5,8 +5,8 @@
     <div
       class="h-20 border-b border-gray-300/70 px-4 py-3 relative mx-4 flex items-center justify-center"
     >
-      <Icon
-        name="mage:message-round"
+      <AppIcon
+        name="message"
         class="w-[18px] h-[18px] text-gray-700/80 absolute left-3"
       />
       <h1 class="text-black font-medium text-lg text-center">Welcome</h1>

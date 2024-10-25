@@ -68,13 +68,13 @@
     </div>
     <div class="flex items-center gap-2 mx-auto max-w-xl mt-12">
       <a href="https://github.com/kajtd" target="_blank">
-        <Icon name="mdi:github" class="w-5 h-5 text-gray-500/80"></Icon>
+        <AppIcon name="github" class="w-5 h-5 text-gray-500/80" />
       </a>
       <a href="https://www.linkedin.com/in/kajetan-domagala/" target="_blank">
-        <Icon name="pajamas:linkedin" class="w-5 h-5 text-gray-500/80"></Icon>
+        <AppIcon name="linkedin" class="w-5 h-5 text-gray-500/80" />
       </a>
       <a href="https://twitter.com" target="_blank">
-        <Icon name="prime:twitter" class="w-4 h-4 text-gray-500/80"></Icon>
+        <AppIcon name="twitter" class="w-5 h-5 text-gray-500/80" />
       </a>
     </div>
   </footer>

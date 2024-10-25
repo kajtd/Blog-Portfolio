@@ -22,7 +22,7 @@ defineProps<{
       <AppButton
         :href="url"
         secondary
-        tailIcon="mdi:github"
+        tailIcon="github"
         iconClass="w-4 h-4"
         class="mt-auto no-underline"
         target="_blank"

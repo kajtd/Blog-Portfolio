@@ -20,7 +20,7 @@ defineProps<{
       <div
         class="bg-gray-300/20 rounded-lg p-2 h-10 w-10 md:h-20 md:w-20 grid place-items-center"
       >
-        <Icon name="mdi:link" class="md:w-6 md:h-6 w-3 h-3 text-black" />
+        <AppIcon name="link" class="md:w-6 md:h-6 w-3 h-3 text-gray-800/70" />
       </div>
     </div>
   </a>

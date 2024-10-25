@@ -24,15 +24,10 @@
     </nav>
     <div class="flex flex-col space-y-2 mt-4">
       <div class="flex space-x-2 items-center">
-        <AppButton
-          @click="copyArticleLink"
-          secondary
-          class="w-32"
-          icon="material-symbols:link"
-        >
+        <AppButton @click="copyArticleLink" secondary class="w-32" icon="link">
           Copy Link
         </AppButton>
-        <AppButton @click="shareOnTwitter" tail-icon="prime:twitter">
+        <AppButton @click="shareOnTwitter" tail-icon="twitter">
           Share on
         </AppButton>
       </div>

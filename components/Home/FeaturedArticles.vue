@@ -18,7 +18,7 @@
     <div class="flex items-center justify-center pt-6">
       <AppButton
         secondary
-        tailIcon="formkit:arrowright"
+        tailIcon="arrow-right"
         iconClass="w-4 h-4"
         href="articles"
       >

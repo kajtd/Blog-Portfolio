@@ -25,13 +25,13 @@
       </div>
       <div class="flex items-center gap-2">
         <a href="https://github.com/kajtd" target="_blank">
-          <Icon name="mdi:github" class="w-5 h-5 text-gray-500/80"></Icon>
+          <AppIcon name="github" class="w-5 h-5 text-gray-500/80" />
         </a>
         <a href="https://www.linkedin.com/in/kajetan-domagala/" target="_blank">
-          <Icon name="pajamas:linkedin" class="w-5 h-5 text-gray-500/80"></Icon>
+          <AppIcon name="linkedin" class="w-5 h-5 text-gray-500/80" />
         </a>
         <a href="https://twitter.com" target="_blank">
-          <Icon name="prime:twitter" class="w-4 h-4 text-gray-500/80"></Icon>
+          <AppIcon name="twitter" class="w-5 h-5 text-gray-500/80" />
         </a>
       </div>
     </div>
@@ -46,10 +46,8 @@
     </div>
     <div class="flex justify-between items-center px-4 py-3">
       <p class="text-xs text-gray-600/80 font-medium">Newsletter</p>
-      <Icon
-        :name="
-          isNewsletterBoxVisible ? 'ic:baseline-minus' : 'ic:baseline-plus'
-        "
+      <AppIcon
+        :name="isNewsletterBoxVisible ? 'substract-line' : 'add-line'"
         class="h-5 w-5 text-gray-600/80 cursor-pointer"
         @click="isNewsletterBoxVisible = !isNewsletterBoxVisible"
       />
@@ -98,6 +96,4 @@ const {
   subscribeToNewsletter,
 } = useNewsletterSubscription();
 const isNewsletterBoxVisible = ref(false);
-
-const { width } = useWindowSize();
 </script>

@@ -1,16 +1,9 @@
+import svgLoader from "vite-svg-loader";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    "nuxt-icon",
-    "@nuxtjs/google-fonts",
-    "@nuxtjs/fontaine",
-    "@nuxt/image",
-    "@nuxt/content",
-    "@nuxthq/studio",
-    "@vueuse/nuxt",
-    "nuxt-newsletter",
-    "@nuxtjs/seo",
-  ],
+  modules: ["@nuxtjs/google-fonts", "@nuxt/content", "@nuxtjs/seo"],
+
   site: {
     url: "https://kajetan.io",
     name: "Blog & Portfolio",
@@ -18,12 +11,14 @@ export default defineNuxtConfig({
       "This is my personal blog and portfolio website. Here I share my thoughts, experiences and projects.",
     defaultLocale: "en",
   },
+
   runtimeConfig: {
     public: {},
     private: {
       apiKey: process.env.VITE_BUTTONDOWN_API_KEY,
     },
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -34,13 +29,16 @@ export default defineNuxtConfig({
           : false, // disable cssnano when not in production
     },
   },
+
   css: ["~/assets/css/main.css"],
+
   newsletter: {
     buttondown: {
       apiKey: process.env.VITE_BUTTONDOWN_API_KEY!!,
       component: true, // optional
     },
   },
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
@@ -59,14 +57,22 @@ export default defineNuxtConfig({
       title: "Blog & Portfolio",
     },
   },
+
   content: {
     highlight: {
       theme: "github-light",
     },
   },
+
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700, 800, 900],
     },
   },
+
+  vite: {
+    plugins: [svgLoader({})],
+  },
+
+  compatibilityDate: "2024-10-25",
 });

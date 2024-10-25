@@ -53,7 +53,7 @@ const queuedMessages = ref<Message[]>([
       slot: "Drop me a message!",
       secondary: true,
       class: "max-w-48 mt-2",
-      icon: "fa:send",
+      icon: "send",
       href: "mailto:contact@kajetan.io",
     },
     avatar: "/my-avatar.webp",

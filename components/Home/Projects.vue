@@ -20,8 +20,8 @@
         class="rounded-full md:w-10 md:h-10 w-8 h-8 bg-gray-200/80 grid place-items-center transition duration-300 ring-primary-300 ring-offset-2 hover:ring-2"
         @click="prevSlide"
       >
-        <Icon
-          name="ion:arrow-back-sharp"
+        <AppIcon
+          name="arrow-down"
           class="text-gray-900/70 md:h-5 h-4 md:w-5 w-4"
         />
       </button>
@@ -29,8 +29,8 @@
         class="rounded-full md:w-10 md:h-10 w-8 h-8 bg-gray-200/80 grid place-items-center transition duration-300 ring-primary-300 ring-offset-2 hover:ring-2"
         @click="nextSlide"
       >
-        <Icon
-          name="ic:sharp-arrow-forward"
+        <AppIcon
+          name="arrow-up"
           class="text-gray-900/70 md:h-5 h-4 md:w-5 w-4"
         />
       </button>

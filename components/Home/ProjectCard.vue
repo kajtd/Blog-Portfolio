@@ -23,7 +23,7 @@
           <Icon name="material-symbols:lock" class="text-gray-900/60 h-3 w-3" />
           <span class="mr-auto ml-auto">{{ project.url }}</span>
         </div>
-        <Icon name="ic:baseline-plus" class="text-gray-900/60 h-5 w-5" />
+        <!-- <Icon name="ic:baseline-plus" class="text-gray-900/60 h-5 w-5" /> -->
       </div>
       <img
         class="rounded-md border border-gray-200/80 shadow-sm w-full object-cover h-32 md:h-64 mb-2"
@@ -34,9 +34,9 @@
     <p class="text-sm md:text-base text-gray-800/70">
       {{ project.description }}
     </p>
-    <AppButton secondary tailIcon="formkit:arrowright" iconClass="w-4 h-4">
+    <!-- <AppButton secondary tailIcon="formkit:arrowright" iconClass="w-4 h-4">
       Learn more
-    </AppButton>
+    </AppButton> -->
   </div>
 </template>
 

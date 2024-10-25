@@ -35,18 +35,20 @@
         </li>
         <li class="flex-1"></li>
         <li class="hidden md:block">
-          <AppButton @click="isNewsletterModalVisible = true" icon="fa:send">
+          <AppButton
+            @click="isNewsletterModalVisible = true"
+            icon="send"
+            iconClass="w-4 h-4"
+          >
             Newsletter
           </AppButton>
         </li>
         <li class="block sm:hidden ml-3">
           <button @click="toggleMobileMenu">
-            <Icon
-              :name="
-                isMenuOpen ? 'iconamoon:close-duotone' : 'charm:menu-hamburger'
-              "
+            <AppIcon
+              :name="isMenuOpen ? 'close-fill' : 'menu-hamburger'"
               class="w-5 h-5"
-            ></Icon>
+            />
           </button>
         </li>
       </ul>
@@ -58,7 +60,10 @@
           class="absolute top-3 right-3 bg-gray-300/30 rounded-full w-6 h-6 grid place-items-center ring-offset-2 hover:ring-2 hover:ring-primary-300 transition-all duration-300"
           @click="toggleMobileMenu"
         >
-          <Icon name="mdi:times" class="w-3.5 h-3.5 mt-[1px] text-gray-500" />
+          <AppIcon
+            name="close-fill"
+            class="w-3.5 h-3.5 mt-[1px] text-gray-500"
+          />
         </button>
         <ul class="flex flex-col items-center py-4 justify-center gap-4">
           <li v-for="item in items" :key="item.path" class="py-2">
@@ -70,7 +75,7 @@
             </button>
           </li>
           <li class="py-2">
-            <AppButton @click="openNewsletterModal" icon="fa:send">
+            <AppButton @click="openNewsletterModal" icon="home">
               Newsletter
             </AppButton>
           </li>
