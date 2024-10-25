@@ -39,39 +39,81 @@ useHead({
 .prose h2 a,
 .prose h3 a,
 .prose h4 a {
-  @apply no-underline;
+  text-decoration: none;
 }
+
 .prose h2[id] {
-  @apply text-2xl md:text-4xl font-medium;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
 }
+
 .prose h3[id] {
-  @apply text-xl md:text-3xl font-medium;
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 1.875rem;
+  }
 }
+
 .prose h4[id] {
-  @apply text-lg md:text-2xl font-medium;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 .prose article > div > p,
 .prose article > div > ul > li,
 .prose article > div > ol > li {
-  @apply text-black text-sm sm:text-base md:text-lg;
+  color: black;
+  font-size: 0.875rem;
+
+  @media (min-width: 640px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
 }
 
 .prose article > div > ul,
 .prose article > div > ol {
-  @apply w-full;
+  width: 100%;
 }
 
 .prose code:not(pre code) {
-  @apply before:hidden after:hidden border-gray-300/90 border shadow-sm p-1 px-2 rounded-lg m-1;
+  border: 1px solid rgb(209 213 219 / 0.9);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
 }
 
 .prose a:not(h2 a, h3 a, h4 a) {
-  @apply text-primary-500;
+  color: #a064e8;
 }
 
 .prose > article > div > img {
-  @apply w-full rounded-lg ring-gray-300/70;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(209 213 219 / 0.9);
 }
 
 @media (max-width: 370px) {
