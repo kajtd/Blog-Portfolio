@@ -75,7 +75,7 @@
             </button>
           </li>
           <li class="py-2">
-            <AppButton @click="openNewsletterModal" icon="home">
+            <AppButton @click="openNewsletterModal" icon="send">
               Newsletter
             </AppButton>
           </li>
