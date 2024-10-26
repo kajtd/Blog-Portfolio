@@ -47,7 +47,14 @@
     <div class="flex justify-between items-center px-4 py-3">
       <p class="text-xs text-gray-600/80 font-medium">Newsletter</p>
       <AppIcon
-        :name="isNewsletterBoxVisible ? 'substract-line' : 'add-line'"
+        v-if="isNewsletterBoxVisible"
+        name="substract-line"
+        class="h-5 w-5 text-gray-600/80 cursor-pointer"
+        @click="isNewsletterBoxVisible = !isNewsletterBoxVisible"
+      />
+      <AppIcon
+        v-else
+        name="add-line"
         class="h-5 w-5 text-gray-600/80 cursor-pointer"
         @click="isNewsletterBoxVisible = !isNewsletterBoxVisible"
       />
@@ -55,12 +62,11 @@
     <div v-show="isNewsletterBoxVisible" class="px-4 py-3 space-y-6">
       <div class="flex flex-col">
         <p class="text-base md:text-lg font-medium">
-          Your are just one click away.
+          You are just one click away.
         </p>
-        <p class="text-xs md:text-sm text-gray-600/80">
-          For tips and updates on no, low and full-code.
-          <br />
-          I'm also sharing different tools and resources I find useful.
+        <p class="text-xs md:text-sm max-w-md mt-2 text-gray-600/80">
+          Subscribe to my newsletter for insights on app development, new tools,
+          and regular updates.
         </p>
       </div>
       <form class="block md:hidden" @submit.prevent="subscribeToNewsletter">
