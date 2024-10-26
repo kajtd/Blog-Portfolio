@@ -11,7 +11,7 @@ defineProps<Props>();
 <template>
   <transition name="fade">
     <div
-      class="fixed top-4 right-4 flex items-start space-x-4 p-4 bg-white border-[1.25px] border-gray-300/80 shadow rounded-md max-w-sm pr-6"
+      class="z-[150] fixed top-4 right-4 flex items-start space-x-4 p-4 bg-white border-[1.25px] border-gray-300/80 shadow rounded-md max-w-sm pr-6"
     >
       <transition name="fade">
         <span v-if="type === 'success'">🥰</span>

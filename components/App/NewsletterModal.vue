@@ -81,6 +81,10 @@ const props = defineProps<{
 
 const emit = defineEmits(["update:isModalVisible"]);
 
+const closeModal = () => {
+  emit("update:isModalVisible", false);
+};
+
 const {
   email,
   loading,
@@ -88,7 +92,7 @@ const {
   alertTitle,
   alertDescription,
   subscribeToNewsletter,
-} = useNewsletterSubscription();
+} = useNewsletterSubscription(closeModal);
 
 const emails = ref<Email[]>([]);
 
@@ -113,7 +117,6 @@ watch(
     if (newValue) {
       loading.value = true;
 
-      // Start the timer
       const timer = new Promise((resolve) => setTimeout(resolve, 1000));
 
       let emailResults: Email[];
@@ -125,7 +128,6 @@ watch(
         emailResults = await fetchAndCacheEmails();
       }
 
-      // Wait for both the timer and email fetching (if needed) to complete
       await timer;
 
       emails.value = emailResults;
@@ -133,8 +135,4 @@ watch(
     }
   }
 );
-
-const closeModal = () => {
-  emit("update:isModalVisible", false);
-};
 </script>

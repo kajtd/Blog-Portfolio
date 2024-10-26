@@ -1,6 +1,6 @@
 import { isValidEmail } from "@/utils/util";
 
-export function useNewsletterSubscription() {
+export function useNewsletterSubscription(onSuccess?: () => void) {
   const email = ref("");
   const loading = ref(false);
   const alert = ref<"success" | "error" | "">("");
@@ -17,7 +17,7 @@ export function useNewsletterSubscription() {
         return;
       }
       loading.value = true;
-      const result = await $fetch("/api/newsletter/subscribe", {
+      const result = await $fetch("/api/subscribe", {
         method: "post",
         body: { email: email.value },
       });
@@ -27,6 +27,10 @@ export function useNewsletterSubscription() {
       alertDescription.value =
         "Thanks for signing up! Please check your inbox to confirm your subscription.";
       email.value = "";
+
+      if (onSuccess) {
+        onSuccess();
+      }
     } catch (error) {
       console.error("Failed to subscribe:", error);
       alert.value = "error";
