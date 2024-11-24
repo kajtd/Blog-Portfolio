@@ -17,7 +17,7 @@
           <img
             :src="doc.img"
             :alt="doc.title"
-            class="rounded-3xl w-full"
+            class="rounded-3xl w-full !ring-0"
             loading="lazy"
           />
           <LazyContentRenderer :value="doc" />
