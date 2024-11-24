@@ -1,4 +1,4 @@
-import type { EmailResponse } from "~/types/Email";
+import type { Email, EmailResponse } from "~/types/Email";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
@@ -14,14 +14,16 @@ export default defineEventHandler(async (event) => {
     }
   );
 
-  // Map the results to only include necessary fields
-  const filteredEmails = response.results.slice(-3).map((email) => ({
-    id: email.id,
-    subject: email.subject,
-    creation_date: email.creation_date,
-    absolute_url: email.absolute_url,
-    image: email.image,
-  }));
+  const filteredEmails: Email[] = response.results
+    .slice(-3)
+    .map((email: Email) => ({
+      id: email.id,
+      subject: email.subject,
+      creation_date: email.creation_date,
+      absolute_url: email.absolute_url,
+      image: email.image,
+      secondary_id: email.secondary_id,
+    }));
 
   return filteredEmails;
 });
