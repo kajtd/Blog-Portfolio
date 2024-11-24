@@ -3,8 +3,8 @@ title: Adding a Newsletter to Your Nuxt Website in a Few Simple Steps
 description: "Learn how to add a newsletter to your Nuxt website using Buttondown."
 slug: nuxt-newsletter
 img: "/articles/nuxt-newsletter/cover.svg"
-published: 2024/24/11
-updated: 2024/11/11
+published: 2024/11/24
+updated: 2024/11/24
 tags: ["Nuxt"]
 ---
 
