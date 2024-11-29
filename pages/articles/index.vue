@@ -6,7 +6,7 @@
     </h4>
     <p class="text-xs sm:text-sm md:text-lg text-gray-800/70 text-center pb-8">
       I write on SEO, productivity, SaaS products or development tools.<br />Here,
-      you'll find a bunch of articles I did in a past.
+      you'll find a bunch of articles I did in the past.
     </p>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <li v-for="(article, id) in articles" :key="id">
