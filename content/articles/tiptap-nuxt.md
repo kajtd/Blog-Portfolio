@@ -17,6 +17,8 @@ In this article, you'll learn how to use Tiptap with Nuxt 3 to create a text-edi
 
 Here is the final result:
 
+<div style="position: relative; padding-bottom: 59.30807248764415%; height: 0;"><iframe src="https://www.loom.com/embed/77b822cbbfd04bce954863298245cbd3?sid=29457d27-9f74-498d-b96e-f4955c7a6d0d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 And here is the code on GitHub. If you find this article helpful, feel free to give it a star ⭐
 
 ::code-bookmark{ url="https://github.com/kajtd/text-editor-nuxt" img="/articles/tiptap-nuxt/tiptap-nuxt-thumbnail.webp" title="Github Code" description="Check out and clone the code on Github to see all the details. For simplicity, some of the code is not included in the article."}
@@ -1159,7 +1161,7 @@ The result? Users can easily add images to their content, complete with captions
 
 This setup gives us a solid foundation for handling images in our editor. In the future, we could expand on this by adding image resizing, alignment options, or even integrating with a cloud storage service for better image management.
 
-You can also use a JavaScript image editor like Pintura, which allows users to crop images, rotate them, add filters, and more.
+You can also use a JavaScript image editor like <a href="/articles/pintura-images">Pintura</a>, which allows users to crop images, rotate them, add filters, and more.
 
 ::link-bookmark{url="https://pqina.nl/pintura/" title="Pintura" description="JavaScript image editor"}
 ::
